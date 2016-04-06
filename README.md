@@ -63,3 +63,8 @@ using sass.
 * Operators and Programming
 
 -----
+
+# Questions
+
+* Sass or SCSS? Should we use the more familiar SCSS format, or the
+  more stream-lined Sass format to teach? Both?
