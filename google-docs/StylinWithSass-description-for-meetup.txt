@@ -1,0 +1,91 @@
+﻿Stylin’ With Sass
+$48
+4 Hours Long
+Instructor: Tamara Temple
+
+
+Turn your CSS Sassy, Sass (Syntactically Awesome Style Sheets) is a pre-processor that provides you with a great ability to easily specify and describe your CSS in a structured and programmatic way. Imagine being able to try out a different colour scheme for your site by changing only 3 or 4 lines of one file. Or defining reusable stylistic components that can be mixed into other style elements, again so you only have to change them in one spot in your files.
+
+
+Sass provides a modern, computer-driven way to create a superb style for your web sites. It’s used by many, many designers, front-end developers, web teams, and projects. Many of the modern CSS frameworks, including Twitter Bootstrap and Zurb Foundation, deliver their frameworks in Sass. Most of the static site generators such as Jekyll, Middleman, Harp, and CodeKit, include Sass compilation already built-in.
+
+
+This workshop will teach you how to create Sass-based style systems, compile them, and include them in your web site projects.
+
+
+DATES & TIMES
+
+
+Enter date and time information here.
+
+
+INSTRUCTOR
+
+
+Instructor bio
+
+
+PREREQUISITE KNOWLEDGE
+
+
+
+
+
+
+WHAT TO COMPLETE BEFORE CLASS
+
+
+
+
+
+
+WHAT TO BRING TO CLASS
+
+
+Laptop & Charger (there will be Wi-Fi and power strips available)
+
+
+WHERE TO PARK
+
+
+Parking description here
+
+
+WHERE TO ENTER THE BUILDING
+
+
+If necessary
+
+
+SPONSORED BY
+
+
+Sponsorship info here!
+LUNCH / MEALS 
+
+
+We try to find companies to sponsor a meal during our classes if they are over 4 hours long. If we are able to find a sponsor, the meals are usually something affordable for feeding a large group, like pizza. In these instances, we will offer both vegetarian and meat based options. If you have other dietary restrictions such as gluten free, dairy free, vegan, etc., please be sure to bring your own lunch. We will notify attendees a day or two before the class on whether a meal will be provided.
+
+
+QUESTIONS?  
+
+
+We're here to help! If you have additional questions or would like to talk further before signing up for a class, please contact Class Organizer, classorganizer@gdiminneapolis.com.
+
+
+NOTE: We will be communicating with you about this class via the email address you have in Meetup.com. Please make sure you check the email address you use for Meetup regularly. If we have fewer than 10 people signed up for this class a week before the starting date, it will be postponed for a later date.
+
+
+REFUND POLICY
+
+
+Refunds will be provided only if the class is cancelled. Please take a look at our refund policy and procedure at http://gdiminneapolis.com/resources/policies-forms/refund-policy/
+
+
+ABOUT GIRL DEVELOP IT
+
+
+Girl Develop It exists to provide affordable, judgement-free opportunities for adult women to learn web and software development. Please help support our mission by reviewing our Code of Conduct.
+
+
+To learn more about our Minneapolis chapter, visit gdiminneapolis.com.
