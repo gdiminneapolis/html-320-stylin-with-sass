@@ -1,0 +1,53 @@
+---
+layout: slide
+title: "What does Sass Do? Nesting!"
+---
+<pre>
+  <code class="sass css">
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+  </code>
+</pre>
+
+
+<p>Example: <a target="_blank" href="http://codepen.io/tamouse/pen/yJBVdZ">http://codepen.io/tamouse/pen/yJBVdZ</a></p>
+
+<aside class="notes">
+
+  <p>
+    Sass allows the nesting of CSS so you can clearly tell which rules
+    apply to which parent, without endless repetition.
+  </p>
+
+  <p>Sass version:</p>
+  <pre>
+    <code>
+nav
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  li
+    display: inline-block
+
+  a
+    display: block
+    padding: 6px 12px
+    text-decoration: none
+    </code>
+  </pre>
+</aside>
