@@ -1,0 +1,56 @@
+title: "Stylin' With Sass!"
+baseurl: "/html-320-stylin-with-sass"
+
+author: Tamara Temple
+description: |
+  Learn how to use Sass to make your CSS styles modular, extendable, and better prepared to fit into modern web site development.
+keywords:
+  - GDI
+  - GDIMpls
+  - Girl Develop It
+  - Sass
+
+# This is general info for GDIMpls
+contact:
+  name: GDI Minneapolis
+  web: http://gdiminneapolis.com
+  email: "minneapolis@girldevelopit.com"
+  twitter: "gdimpls"
+  github: "gdiminneapolis"
+
+
+# There are a handful of styles available with reveal. They can be found in the
+# reveal.js/css/themes folder, and include:
+#
+# style: gdicool
+# style: gdidefault
+# style: gdilight
+# style: gdisunny
+# style: simple
+style: gdidefault
+
+# Similarly, syntax highlighting styles are available in reveal. They can be found
+# in the reveals.js/lib/ folder, and include:
+#
+# syntax_style: dark.css
+# syntax_style: light.css
+# syntax_style: zenburn.css
+syntax_style: zenburn
+
+# This is where your slides will be found, in the _slides/ folder.
+# Number them in sequence
+collections:
+  - slides
+
+exclude:
+  - CONTRIBUTOR_COVENANT.md
+  - Description.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - LICENSE.txt
+  - Outline.md
+  - README.md
+  - bin
+  - google-docs
+  - project_template
