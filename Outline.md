@@ -43,9 +43,15 @@
 
 * Installing Ruby
 
-  * Windows (rubyinstaller.com)
-  * Mac (built in)
-  * Linux (rvm, rbenv) (default version may be too old)
+    * Windows (rubyinstaller.com)
+
+    * Mac
+        * Yosemite or newer: okay
+        * Mountain Lion or older: install via rvm
+
+    * Linux
+        * default is probably too old
+        * install via rvm
 
 * Installing Sass
 
@@ -66,7 +72,7 @@ Run sass from command line:
     cd stylesheets
     sass --watch scss:css
 ```
-    
+
 Watches for any changes in `stylesheets/scss` and compiles the files into `stylesheets/css`.
 
 ## Get Stylin!
@@ -91,4 +97,3 @@ Watches for any changes in `stylesheets/scss` and compiles the files into `style
   * Jekyll, Middleman, other static site generators
 * Build tools
   * Grunt, Gulp, Webpack
-  

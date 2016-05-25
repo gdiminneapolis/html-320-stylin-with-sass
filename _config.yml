@@ -1,0 +1,18 @@
+title: Your Awesome Course
+contact:
+  web: http://gdiminneapolis.com
+  name: GDI Minneapolis
+  twitter: GDIMpls
+  facebook: GDIMpls
+  github: gdiminneapolis
+  meetup: Girl-Develop-It-Minneapolis
+
+collections:
+  - slides
+
+exclude:
+  - LICENSE.txt
+  - Outline.md
+  - README.md
+  - google-docs
+  - project_template
