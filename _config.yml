@@ -29,7 +29,7 @@ long_urls:
     text: Print Notes
     title: Printed Notes
   files:
-    url: /html-320-stylin-with-sass/project_files.zip
+    url: https://github.com/tamouse/html-320-stylin-with-sass-project-files/archive/master.zip
     text: Project Files ZIP
     title: Project Files ZIP
 
@@ -81,6 +81,7 @@ exclude:
   - LICENSE
   - LICENSE.txt
   - Outline.md
+  - Rakefile
   - README.md
   - bin
   - google-docs

@@ -5,26 +5,23 @@ title: "Setting up Stylesheets"
 
 <div class="left-align">
   <ul>
-    <li>rename CSS files to have a <span class="blue"><strong>.scss</strong></span> file extension</li>
+    <li>rename the two CSS files in
+    the <code class="pink">/stylesheets/</code> directory to have a <span class="blue"><strong>.scss</strong></span> file extension</li>
     <li>create two directories in
       the <code class="pink">/stylesheets/</code> directory:
-      <ul>
-	<li><span class="blue">css</span></li>
-	<li><span class="blue">scss</span></li>
-      </ul>
+      <span class="blue">css</span> and
+      <span class="blue">scss</span>
     </li>
     <li>
       move the <span class="blue">.scss files</span> inside
       the <code class="pink">/stylesheets/scss/</code>  folder like so:
-      <pre>
-	<code>/stylesheets/
+      <pre><code>/stylesheets/
   /css/
     .keep
   /scss/
     /font/
     reset.scss
-    styles.scss</code>
-      </pre>
+    styles.scss</code></pre>
     </li>
     <li>Update your index.html stylesheet url in <code class="pink">&lt;head&gt;</code> to point
     to <code class="pink">/stylesheets/css/</code>
