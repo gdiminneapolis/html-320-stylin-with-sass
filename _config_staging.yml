@@ -1,0 +1,19 @@
+#   jekyll build --config=_config.yml,_config_staging.yml
+url: "https://tamouse.github.io"
+
+short_urls:
+  slides:
+    url: http://bit.ly/1TAWRFu
+    text: http://bit.ly/1Z1gaGn
+    title: Slides
+  print:
+    url: http://bit.ly/1XycdtH
+    text: http://bit.ly/1XycdtH
+    title: Print Notes
+  files:
+    url: "#"
+    text: "#"
+    title: Project Files
+
+qr_codes:
+  slides: images/qr-code-staging.jpg

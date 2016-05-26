@@ -18,16 +18,47 @@ contact:
   twitter: "gdimpls"
   github: "gdiminneapolis"
 
+# These are for local development, i.e. http://127.0.0.1:4000
+long_urls:
+  slides:
+    url: /html-320-stylin-with-sass/
+    text: Slides
+    title: Slides
+  print:
+    url: /html-320-stylin-with-sass/print.html
+    text: Print Notes
+    title: Printed Notes
+  files:
+    url: /html-320-stylin-with-sass/project_files.zip
+    text: Project Files ZIP
+    title: Project Files ZIP
+
+short_urls:
+  slides:
+    url: http://bit.ly/1Z1gaGn
+    text: http://bit.ly/1Z1gaGn
+    title: Slides
+  print:
+    url: http://bit.ly/1TFoBFY
+    text: http://bit.ly/1TFoBFY
+    title: Print Notes
+  files:
+    url: "#"
+    text: "#"
+    title: Project Files
+
+qr_codes:
+  slides: images/qr-code-local.jpg
+
 
 # There are a handful of styles available with reveal. They can be found in the
 # reveal.js/css/themes folder, and include:
 #
 # style: gdicool
-# style: gdidefault
+style: gdidefault
 # style: gdilight
 # style: gdisunny
 # style: simple
-style: gdidefault
 
 # Similarly, syntax highlighting styles are available in reveal. They can be found
 # in the reveals.js/lib/ folder, and include:

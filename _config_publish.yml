@@ -16,3 +16,21 @@ url: "https://gdiminneapolis.github.io"
 # at the url "https://<yourgithub>.github.io/<repo-name/". This could
 # generate some confusion when contributing to the GDIMpls
 # repo. **BEWARE**
+
+# published links
+short_urls:
+  slides:
+    url: http://bit.ly/1Xy9QY2
+    title: Slides
+    text: http://bit.ly/1Xy9QY2
+  print:
+    url: http://bit.ly/1TFmQIJ
+    text: http://bit.ly/1TFmQIJ
+    title: Print Notes
+  files:
+    url: "#"
+    text: "#"
+    title: Project Files
+
+qr_codes:
+  slides: images/GDI_Mpls_Stylin_With_Sass_class-qr-code.png
