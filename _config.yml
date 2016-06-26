@@ -86,3 +86,8 @@ exclude:
   - bin
   - google-docs
   - project_template
+
+
+kramdown:
+  input: GFM
+  parse_block_html: true
