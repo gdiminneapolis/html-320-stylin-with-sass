@@ -1,0 +1,34 @@
+---
+# Overrides for reveal styles
+---
+
+$blue: #01A9B4;
+$green: #92BB44;
+$yellow: #EDAB23;
+$pink: #F05B62;
+$red: #8B0036;
+
+
+.reveal strong { color: $green; }
+.title-image img { width: 200px; }
+.notes { display: none; }
+.go-wide, .gowide {max-width: none; }
+.no-wrap, .nowrap { white-space: nowrap; }
+.p-tb-20 { padding: 20px 0 !important; }
+div.box {
+    clear: both;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #01A9B4;
+    background-color: #eee;
+    color: #01A9B4;
+    text-align: center;
+    border-radius: 15px;
+}
+.reveal pre {
+    font-size: 1em;
+    width: 100%;
+    &.narrow {
+	width: 70%;
+    }
+}

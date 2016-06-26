@@ -1,0 +1,21 @@
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ site.title }}</title>
+
+  <meta name="description" content="{{site.description}}">
+  <meta name="author" content="{{site.author}}">
+  <meta name="keywords" content="{{site.keywords | join: ", "}}">
+
+  <link rel="stylesheet" href="{{site.baseurl}}/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="{{site.baseurl}}/reveal.js/css/theme/{{site.style}}.css" id="theme">
+  <link rel="stylesheet" href="{{site.baseurl}}/reveal.js/lib/css/{{site.syntax_style}}.css">
+
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
+  <link rel="stylesheet" href="{{site.baseurl}}/css/overrides.css" media="screen" />
+</head>
