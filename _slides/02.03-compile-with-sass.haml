@@ -1,0 +1,52 @@
+---
+layout: slide
+
+---
+
+%section
+  %h3 Compile With Sass Watch Command
+
+  .fragment
+    We need to compile our .scss (Sass) files to make the CSS work in the browser.
+    %hr
+
+  %ol
+    %li.fragment
+      Open up the terminal
+
+    %li.fragment
+      Navigate via the command line to your
+      %code stylesheets/
+      directory in the "practice" folder.
+
+      %pre
+        %code.bash
+          cd ~/Desktop/practice/stylesheets
+
+    %li.fragment
+      Then run the sass compiler:
+
+      %pre
+        %code.sass.css sass --watch scss:css
+
+
+    %li.fragment
+      Refresh Your Browser
+
+  .fragment
+    %hr
+    How does that look now?
+
+
+<aside class="notes">
+
+Navigation: in the terminal window (command line prompt), you need
+to jump down to the directory where your project is.
+
+<pre><code class="bash">pushd ~/Sites/gdi-sass/ # where you unzipped the project files
+pushd project_files/class1-examples/practice/ # into the practice area
+pushd stylesheets # into the stylesheets</code></pre>
+
+starting from where ever you unzipped your files.
+
+</aside>

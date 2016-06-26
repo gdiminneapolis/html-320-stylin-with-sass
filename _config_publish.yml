@@ -9,6 +9,7 @@
 # in the slides. By default, use the GDIMpls Github Pages
 # prefix, and the baseurl setting in _config.yml
 # for the repository name.
+baseurl: "/html-320-stylin-with-sass"
 url: "https://gdiminneapolis.github.io"
 
 # If you fork something from the GDIMpls repo into your own repo, and
