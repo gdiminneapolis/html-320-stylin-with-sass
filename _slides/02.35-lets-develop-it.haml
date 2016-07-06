@@ -1,0 +1,37 @@
+---
+layout: slide
+title: "Let's Develop It!"
+---
+
+%section
+  %h2 {{page.title}}
+  %ol
+    %li.fragment
+      Add/change variables in
+      %code _settings.scss
+      file to use color functions
+
+    %li.fragment
+      Changing
+      %code :hover
+      and
+      %code :active
+      colours is a great thing to use colour functions for
+
+  .fragment
+    %pre.gowide
+      %code
+        :preserve
+          $primary-btn: 'mediumblue';
+          $primary-btn-hov: darken($primary-button, 20)
+
+  .fragment
+    %pre.gowide
+      %code
+        :preserve
+          button-primary {
+            background-color: $primary-btn;
+            &:hover, &:active {
+              background-color: $pimary-btn-hov;
+            }
+          }

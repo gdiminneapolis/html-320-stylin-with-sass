@@ -9,10 +9,11 @@ $pink: #F05B62;
 $red: #8B0036;
 
 
+.reveal .small {font-size: 80%;}
 .reveal strong { color: $green; }
 .title-image img { width: 200px; }
 .notes { display: none; }
-.go-wide, .gowide {max-width: none; }
+.go-wide, .gowide, .reveal .go-wide, .reveal .gowide { max-width: none; }
 .no-wrap, .nowrap { white-space: nowrap; }
 .p-tb-20 { padding: 20px 0 !important; }
 div.box {
