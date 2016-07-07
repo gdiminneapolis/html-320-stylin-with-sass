@@ -8,14 +8,32 @@ $yellow: #EDAB23;
 $pink: #F05B62;
 $red: #8B0036;
 
+.reveal {
+    h1, h2, h3, h4, h5, h6 {
+	text-transform: inherit;
+    }
+    strong { color: $green; }
+    code { color: $yellow; }
+    pre {
+	padding: 10px;
+	font-size: 1em;
+	width: 100%;
+	max-height: 480px;
+	&.narrow {
+	    width: 70%;
+	}
+	background-color: #222;
+	overflow: auto;
+	code { color: white; }
+    }
+    .slide-number { bottom: inherit; right: inherit; top: 15px; left: 15px; font-size: 1.0em; }
+    .small {font-size: 80%;}
+    .go-wide, .gowide { max-width: none; }
+}
 
-.reveal .small {font-size: 80%;}
-.reveal strong { color: $green; }
 .title-image img { width: 200px; }
 .notes { display: none; }
-.go-wide, .gowide, .reveal .go-wide, .reveal .gowide { max-width: none; }
 .no-wrap, .nowrap { white-space: nowrap; }
-.p-tb-20 { padding: 20px 0 !important; }
 div.box {
     clear: both;
     margin: 20px;
@@ -26,16 +44,3 @@ div.box {
     text-align: center;
     border-radius: 15px;
 }
-.reveal pre {
-    padding: 10px;
-    font-size: 1em;
-    width: 100%;
-    max-height: 480px;
-    &.narrow {
-	width: 70%;
-    }
-    background-color: #222;
-    overflow: auto;
-}
-.reveal code { color: $yellow; }
-.reveal pre code { color: white; }
