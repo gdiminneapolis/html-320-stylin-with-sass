@@ -11,10 +11,6 @@ short_urls:
     url: http://bit.ly/1XycdtH
     text: http://bit.ly/1XycdtH
     title: Print Notes
-  files:
-    url: "#"
-    text: "#"
-    title: Project Files
 
 qr_codes:
   slides: images/qr-code-staging.jpg

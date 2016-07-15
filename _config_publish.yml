@@ -22,16 +22,9 @@ url: "https://gdiminneapolis.github.io"
 short_urls:
   slides:
     url: http://bit.ly/1Xy9QY2
-    title: Slides
     text: http://bit.ly/1Xy9QY2
+    title: Slides
   print:
     url: http://bit.ly/1TFmQIJ
     text: http://bit.ly/1TFmQIJ
     title: Print Notes
-  files:
-    url: "#"
-    text: "#"
-    title: Project Files
-
-qr_codes:
-  slides: images/GDI_Mpls_Stylin_With_Sass_class-qr-code.png

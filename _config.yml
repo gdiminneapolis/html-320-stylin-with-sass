@@ -29,7 +29,7 @@ long_urls:
     text: Print Notes
     title: Printed Notes
   files:
-    url: https://github.com/tamouse/html-320-stylin-with-sass-project-files/archive/master.zip
+    url: https://github.com/gdiminneapolis/html-320-stylin-with-sass-project-files/archive/master.zip
     text: Project Files ZIP
     title: Project Files ZIP
 
@@ -43,13 +43,13 @@ short_urls:
     text: http://bit.ly/1TFoBFY
     title: Print Notes
   files:
-    url: "#"
-    text: "#"
+    url: "https://goo.gl/oBUWPt"
+    text: "https://goo.gl/oBUWPt"
     title: Project Files
 
 qr_codes:
   slides: images/qr-code-local.jpg
-
+  files: images/stylin-with-sass-project-files-download-qr-code.png
 
 # There are a handful of styles available with reveal. They can be found in the
 # reveal.js/css/themes folder, and include:
