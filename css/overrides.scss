@@ -29,6 +29,8 @@ $red: #8B0036;
     .slide-number { bottom: inherit; right: inherit; top: 15px; left: 15px; font-size: 1.0em; }
     .small {font-size: 80%;}
     .go-wide, .gowide { max-width: none; }
+
+    .hide-gif { text-align: center; font-size: 50%; font-style: italic; margin: 10px; cursor: pointer; text-decoration: underline;}
 }
 
 .title-image img { width: 200px; }
@@ -43,4 +45,31 @@ div.box {
     color: #01A9B4;
     text-align: center;
     border-radius: 15px;
+}
+
+.reveal {
+  .centered-table {
+    display: table;
+    width: 70%;
+    margin: 10px auto;
+  }
+  .table-row {
+    display: table-row;
+    width: 100%;
+    padding: 3px;
+  }
+  .table-cell-right, .table-cell-left {
+    display: table-cell;
+    padding: 6px;
+    width: 40%;
+  }
+  .table-cell-right {
+    text-align: right;
+  }
+  .table-cell-left {
+    text-align: left;
+  }
+  .table-cell-center {
+    text-align: center;
+  }
 }

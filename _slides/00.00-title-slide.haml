@@ -1,0 +1,30 @@
+---
+layout: slide
+logo: images/gdi_logo_badge.png
+
+---
+
+%section
+  .title-image
+    %img{src: "{{page.logo}}"}
+
+  %h2= "{{site.title}}"
+
+  = "{{site.description}}"
+
+  .centered-table
+    .table-row
+      .table-cell-right Instructor:
+      .table-cell-left
+        %a{href: "mailto:{{site.data.instructor.email}}"}
+          {{site.data.instructor.name}}
+    .table-row
+      .table-cell-right Github:
+      .table-cell-left
+        %a{href: "https://github.com/{{site.data.instructor.github}}"}
+          {{site.data.instructor.github}}
+    .table-row
+      .table-cell-right Twitter:
+      .table-cell-left
+        %a{href: "https://github.com/{{site.data.instructor.twitter}}"}
+          {{site.data.instructor.twitter}}

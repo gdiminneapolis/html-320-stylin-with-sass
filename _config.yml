@@ -2,8 +2,7 @@ title: "Stylin' With Sass!"
 baseurl: ""
 
 author: Tamara Temple
-description: |
-  Learn how to use Sass to make your CSS styles modular, extendable, and better prepared to fit into modern web site development.
+description: Learn how to use Sass to make your CSS styles modular, extendable, and better prepared to fit into modern web site development.
 keywords:
   - GDI
   - GDIMpls
