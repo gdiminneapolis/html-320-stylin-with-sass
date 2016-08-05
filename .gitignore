@@ -5,3 +5,4 @@ _site
 /bin/
 /project_template/stylesheets/css
 !/project_template/stylesheets/css/.keep
+/tmp/
