@@ -8,6 +8,9 @@ $yellow: #EDAB23;
 $pink: #F05B62;
 $red: #8B0036;
 
+$wide-width: 900px;
+
+
 .reveal {
     h1, h2, h3, h4, h5, h6 {
 	text-transform: inherit;
@@ -16,7 +19,7 @@ $red: #8B0036;
     code { color: $yellow; }
     pre {
 	padding: 10px;
-	font-size: 1em;
+	font-size: 0.7em;
 	width: 100%;
 	max-height: 480px;
 	&.narrow {
@@ -28,8 +31,10 @@ $red: #8B0036;
     }
     .slide-number { bottom: inherit; right: inherit; top: 15px; left: 15px; font-size: 1.0em; }
     .small {font-size: 80%;}
-    .go-wide, .gowide { max-width: none; }
-
+    .go-wide, .gowide { width: $wide-width; }
+    .left-align {
+      h1, h2, h3, h4, h5, h6 { text-align: center; }
+    }
     .hide-gif { text-align: center; font-size: 50%; font-style: italic; margin: 10px; cursor: pointer; text-decoration: underline;}
 }
 

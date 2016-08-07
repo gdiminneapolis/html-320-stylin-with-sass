@@ -1,7 +1,42 @@
 ---
+# Print styles
 ---
 
-.highlight  { background: #ffffff; }
+
+body { width: 960px; margin: 20px auto; }
+aside { font-style: italic; margin-left: 100px; color: gray; }
+code.highlighter-rouge { color: red; }
+.title-image img { width: 100px; }
+.noprint { display: none; }
+.centered-table {
+  display: table;
+  width: 70%;
+  margin: 10px auto;
+}
+.table-row {
+  display: table-row;
+  width: 100%;
+  padding: 3px;
+}
+.table-cell-right, .table-cell-left {
+  display: table-cell;
+  padding: 6px;
+  width: 40%;
+}
+.table-cell-right {
+  text-align: right;
+}
+.table-cell-left {
+  text-align: left;
+}
+.table-cell-center {
+  text-align: center;
+}
+
+$colorNameTag: #d66e0f;
+$colorNameVariable: $colorNameTag;
+
+.highlight  { background: #FFF; border: 1px solid black; padding: 10px; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
@@ -29,16 +64,18 @@
 .highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
 .highlight .m { color: #009999 } /* Literal.Number */
 .highlight .s { color: #d14 } /* Literal.String */
-.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .n, .highlight .na, .highlight .nd { color: #008080 } /* Name.Attribute */
 .highlight .nb { color: #0086B3 } /* Name.Builtin */
 .highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+
 .highlight .no { color: #008080 } /* Name.Constant */
 .highlight .ni { color: #800080 } /* Name.Entity */
 .highlight .ne { color: #f75555; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #f75555; font-weight: bold } /* Name.Function */
+.highlight .nl { color: #1cd1d4 }
 .highlight .nn { color: #f75555 } /* Name.Namespace */
-.highlight .nt { color: #f7fa59 } /* Name.Tag */
-.highlight .nv { color: #f7fa59 } /* Name.Variable */
+.highlight .nt { color: $colorNameTag } /* Name.Tag */
+.highlight .nv { color: $colorNameVariable } /* Name.Variable */
 .highlight .ow { font-weight: bold } /* Operator.Word */
 .highlight .w { color: #bbbbbb } /* Text.Whitespace */
 .highlight .mf { color: #009999 } /* Literal.Number.Float */
