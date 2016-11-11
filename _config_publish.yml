@@ -11,6 +11,7 @@
 # for the repository name.
 baseurl: "/html-320-stylin-with-sass"
 url: "https://gdiminneapolis.github.io"
+destination: docs
 
 # If you fork something from the GDIMpls repo into your own repo, and
 # use the same publish to Github track, your version will be availble
