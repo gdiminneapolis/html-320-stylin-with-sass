@@ -1,17 +1,9 @@
 <footer>
   <div class="copyright">
-    <a target="_blank" href="{{site.url | append: site.baseurl}}">{{site.title}}</a>
-    &bullet;
-    <a target="_blank" href="{{site.url | append: site.baseurl}}/print.html">print edition</a>
-    &bullet;
-    <a target="_blank" href="{{site.contact.web}}">{{site.contact.name}}</a>
-    &bullet;
-    <a target="_blank" href="http://twitter.com/{{site.contact.twitter}}">@{{site.contact.twitter}}</a>
-    &bullet;
-    <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
-      <img
-	 alt="Creative Commons License" style="border-width:0"
-	 src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png"/>
-    </a>
+    <i class="fa fa-twitter fa-lg"><span class="visually-hidden">Twitter</span></i> &bullet;
+    {% for tag in site.data.tweet_tags %}
+    <a href="{{ tag.href }}" target="blank">{{ tag.text }}</a> &bullet;
+    {% endfor %}
+    {% include cclicense.html type="image-only" %}
   </div>
 </footer>

@@ -17,38 +17,6 @@ contact:
   twitter: "gdimpls"
   github: "gdiminneapolis"
 
-# These are for local development, i.e. http://127.0.0.1:4000
-long_urls:
-  slides:
-    url: /html-320-stylin-with-sass/
-    text: Slides
-    title: Slides
-  print:
-    url: /html-320-stylin-with-sass/print.html
-    text: Print Notes
-    title: Printed Notes
-  files:
-    url: https://github.com/gdiminneapolis/html-320-stylin-with-sass-project-files/archive/master.zip
-    text: Project Files ZIP
-    title: Project Files ZIP
-
-short_urls:
-  slides:
-    url: http://bit.ly/1Z1gaGn
-    text: http://bit.ly/1Z1gaGn
-    title: Slides
-  print:
-    url: http://bit.ly/1TFoBFY
-    text: http://bit.ly/1TFoBFY
-    title: Print Notes
-  files:
-    url: "https://goo.gl/oBUWPt"
-    text: "https://goo.gl/oBUWPt"
-    title: Project Files
-
-qr_codes:
-  slides: images/qr-code-local.jpg
-  files: images/stylin-with-sass-project-files-download-qr-code.png
 
 # There are a handful of styles available with reveal. They can be found in the
 # reveal.js/css/themes folder, and include:
@@ -77,11 +45,13 @@ exclude:
   - Description.md
   - Gemfile
   - Gemfile.lock
+  - jekyll-reveal-starter-kit-readme.md
   - LICENSE
   - LICENSE.txt
   - Outline.md
   - Rakefile
   - README.md
+  - student-letter-addendum.md
   - bin
   - google-docs
   - project_template

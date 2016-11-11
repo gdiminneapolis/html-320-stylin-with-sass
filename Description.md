@@ -9,13 +9,13 @@
 
 **Turn your CSS Sassy**
 
-Sass (Syntactically Awesome Style Sheets) is a
-pre-processor that provides you with a great ability to easily specify
-and describe your CSS in a structured and programmatic way. Imagine
-being able to try out a different colour scheme for your site by
-changing only 3 or 4 lines of one file. Or defining reusable stylistic
-components that can be mixed into other style elements, again so you
-only have to change them in one spot in your files.
+Sass (Syntactically Awesome Style Sheets) is a pre-processor that
+provides you with a great ability to easily specify and describe your
+CSS in a structured and programmatic way. Imagine being able to try
+out a different colour scheme for your site by changing only 3 or 4
+lines of one file. Or defining reusable stylistic components that can
+be mixed into other style elements, again so you only have to change
+them in one spot in your files.
 
 Sass provides a modern, computer-driven way to create a superb style
 for your web sites. It’s used by many, many designers, front-end
@@ -49,22 +49,32 @@ developmen for a long time, but she really does not Know Everything.
 This is an advanced class, and participants should be comfortable with
 the following topics:
 
-* CSS3
-* Some programming knowledge
-* Use of the command line
+* CSS
+* Some programming knowledge (variables, loops, functions)
+* Use of the command line and Git
 * Installing software on their laptop
+
+  If you cannot install software on your laptop, obtain a
+  [Cloud9](https://c9.io "Cloud 9 development
+  environment"){:target="_blank"} account to work on these projects.
 
 ## What to Complete Before Class
 
-* Install [Atom][atom] or [Sublime Text 2 or 3][sublime]
-* Make sure you have a modern browser install and know how to use it's
-development tools
-* Download the [project files][project-files] and unzip them someplace
-you can get to them
-
-[atom]: https://atom.io/ "Atom Editor"
-[sublime]: http://www.sublimetext.com/ "Sublime Text Editor"
-[project-files]: https://github.com/tamouse/html-320-stylin-with-sass-project-files/archive/master.zip "Project Files for Sass course zip file download"
+* Make sure you have [Atom](https://atom.io/ "Atom Editor"){:target="_blank"} or
+  [Sublime Text 2 or 3](http://www.sublimetext.com/ "Sublime Text
+  Editor"){:target="_blank"} installed on your system.
+* Make sure you have
+  [Chrome](https://google.com/chrome/browser){:target="_blank"}
+  browser installed.
+* Make sure you have [Git](https://git-scm.com/downloads){:target="_blank"}
+  installed.
+* Make sure you have [Node.js](https://nodejs.org/en/){:target="_blank"} v6.9.1
+  LTS installed.
+* **Clone** the
+  [project files](https://github.com/tamouse/html-320-stylin-with-sass-project-files
+  "Project Files for Sass course zip file download"){:target="_blank"}
+  onto your Desktop or someplace you can work with them. See the
+  README file for the project files.
 
 ## What to Bring to Class
 

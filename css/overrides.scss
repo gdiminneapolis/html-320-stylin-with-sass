@@ -19,7 +19,7 @@ $wide-width: 900px;
     code { color: $yellow; }
     pre {
 	padding: 10px;
-	font-size: 0.7em;
+	/* font-size: 0.6em; */
 	width: 100%;
 	max-height: 480px;
 	&.narrow {
@@ -38,6 +38,9 @@ $wide-width: 900px;
     .hide-gif { text-align: center; font-size: 50%; font-style: italic; margin: 10px; cursor: pointer; text-decoration: underline;}
     .vertical-space {
       margin-top: 1.2em * 2;
+    }
+    .visually-hidden {
+      display: none;
     }
 }
 

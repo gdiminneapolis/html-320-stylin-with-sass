@@ -1,3 +1,38 @@
+# These are for local development, i.e. http://127.0.0.1:4000
+long_urls:
+  slides:
+    url: /html-320-stylin-with-sass/
+    text: Slides
+    title: Slides
+  print:
+    url: /html-320-stylin-with-sass/print.html
+    text: Print Notes
+    title: Printed Notes
+  files:
+    url: https://github.com/gdiminneapolis/html-320-stylin-with-sass-project-files/
+    text: Project Files
+    title: Project Files
+    clone_url: https://github.com/gdiminneapolis/html-320-stylin-with-sass-project-files.git
+
+
+short_urls:
+  slides:
+    url: http://bit.ly/1Z1gaGn
+    text: http://bit.ly/1Z1gaGn
+    title: Slides
+  print:
+    url: http://bit.ly/1TFoBFY
+    text: http://bit.ly/1TFoBFY
+    title: Print Notes
+  files:
+    url: "https://goo.gl/oBUWPt"
+    text: "https://goo.gl/oBUWPt"
+    title: Project Files
+
+qr_codes:
+  slides: images/qr-code-local.jpg
+  files: images/stylin-with-sass-project-files-download-qr-code.png
+
 course_survey:
   href: http://tinyurl.com/gdimpls
   text: GDI Minneapolis Class Evaluation
