@@ -46,9 +46,9 @@ logo: images/gdi_logo_badge.png
   %h3 Links
   %ul
     %li
-      %a{href: "{{'/' | relative_url }}", target: "_blank"} Slides
+      %a{href: "{{'/' | prepend: site.baseurl }}", target: "_blank"} Slides
     %li
-      %a{href: "{{ '/print' | relative_url}}", target: "_blank"} Printed Notes
+      %a{href: "{{ '/print' | prepend: site.baseurl}}", target: "_blank"} Printed Notes
     %li
       %a{href: "{{ site.data.links.long_urls.files.url }}", target: "_blank"} Project Files
     %li
