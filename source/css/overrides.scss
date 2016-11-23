@@ -33,6 +33,7 @@ $wide-width: 900px;
     .small {font-size: 80%;}
     .go-wide, .gowide { width: $wide-width; }
     .left-align {
+      text-align: left;
       h1, h2, h3, h4, h5, h6 { text-align: center; }
     }
     .hide-gif { text-align: center; font-size: 50%; font-style: italic; margin: 10px; cursor: pointer; text-decoration: underline;}
@@ -42,10 +43,12 @@ $wide-width: 900px;
     .visually-hidden {
       display: none;
     }
+
+    .notes { display: none; }
+
 }
 
 .title-image img { width: 200px; }
-.notes { display: none; }
 .no-wrap, .nowrap { white-space: nowrap; }
 div.box {
     clear: both;
@@ -83,4 +86,22 @@ div.box {
   .table-cell-center {
     text-align: center;
   }
+
+  .table {
+    border: 1px solid white;
+    border-collapse: collapse;
+    margin: auto;
+    th {
+      color: gold;
+      font-weight: bold;
+      border: 1px solid white;
+      padding: 10px;
+    }
+    td {
+      text-align: center;
+      border: 1px solid white;
+      padding: 10px;
+    }
+  }
+
 }

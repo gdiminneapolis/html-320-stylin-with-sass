@@ -16,17 +16,17 @@ logo: images/gdi_logo_badge.png
     .table-row
       .table-cell-right Instructor:
       .table-cell-left
-        %a{href: "mailto:{{site.data.instructor.email}}"}
+        %a{href: "mailto:{{site.data.instructor.email}}", target: "_blank"}
           {{site.data.instructor.name}}
     .table-row
       .table-cell-right Github:
       .table-cell-left
-        %a{href: "https://github.com/{{site.data.instructor.github}}"}
+        %a{href: "https://github.com/{{site.data.instructor.github}}", target: "_blank"}
           {{site.data.instructor.github}}
     .table-row
       .table-cell-right Twitter:
       .table-cell-left
-        %a{href: "https://github.com/{{site.data.instructor.twitter}}"}
+        %a{href: "https://github.com/{{site.data.instructor.twitter}}", target: "_blank"}
           {{site.data.instructor.twitter}}
 
 %section
@@ -48,7 +48,7 @@ logo: images/gdi_logo_badge.png
     %li
       %a{href: "{{'/' | relative_url }}", target: "_blank"} Slides
     %li
-      %a{href: "{{ '/pring' | relative_url}}", target: "_blank"} Printed Notes
+      %a{href: "{{ '/print' | relative_url}}", target: "_blank"} Printed Notes
     %li
       %a{href: "{{ site.data.links.long_urls.files.url }}", target: "_blank"} Project Files
     %li

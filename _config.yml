@@ -17,7 +17,6 @@ contact:
   twitter: "gdimpls"
   github: "gdiminneapolis"
 
-
 # There are a handful of styles available with reveal. They can be found in the
 # reveal.js/css/themes folder, and include:
 #
@@ -27,35 +26,15 @@ style: gdidefault
 # style: gdisunny
 # style: simple
 
-# Similarly, syntax highlighting styles are available in reveal. They can be found
-# in the reveals.js/lib/ folder, and include:
-#
-# syntax_style: dark.css
-# syntax_style: light.css
-# syntax_style: zenburn.css
-syntax_style: zenburn
+
+# This is the directory the source files will be found in
+source: source
 
 # This is where your slides will be found, in the _slides/ folder.
 # Number them in sequence
 collections:
   - slides
-
-exclude:
-  - CONTRIBUTOR_COVENANT.md
-  - Description.md
-  - Gemfile
-  - Gemfile.lock
-  - jekyll-reveal-starter-kit-readme.md
-  - LICENSE
-  - LICENSE.txt
-  - Outline.md
-  - Rakefile
-  - README.md
-  - student-letter-addendum.md
-  - bin
-  - google-docs
-  - project_template
-
+  - oldslides
 
 kramdown:
   input: GFM
