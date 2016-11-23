@@ -25,8 +25,10 @@
   font-size: 80%; }
 .reveal .go-wide, .reveal .gowide {
   width: 900px; }
-.reveal .left-align h1, .reveal .left-align h2, .reveal .left-align h3, .reveal .left-align h4, .reveal .left-align h5, .reveal .left-align h6 {
-  text-align: center; }
+.reveal .left-align {
+  text-align: left; }
+  .reveal .left-align h1, .reveal .left-align h2, .reveal .left-align h3, .reveal .left-align h4, .reveal .left-align h5, .reveal .left-align h6 {
+    text-align: center; }
 .reveal .hide-gif {
   text-align: center;
   font-size: 50%;
@@ -38,12 +40,11 @@
   margin-top: 2.4em; }
 .reveal .visually-hidden {
   display: none; }
+.reveal .notes {
+  display: none; }
 
 .title-image img {
   width: 200px; }
-
-.notes {
-  display: none; }
 
 .no-wrap, .nowrap {
   white-space: nowrap; }
@@ -76,3 +77,16 @@ div.box {
   text-align: left; }
 .reveal .table-cell-center {
   text-align: center; }
+.reveal .table {
+  border: 1px solid white;
+  border-collapse: collapse;
+  margin: auto; }
+  .reveal .table th {
+    color: gold;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 10px; }
+  .reveal .table td {
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px; }

@@ -2,6 +2,10 @@ body {
   width: 960px;
   margin: 20px auto; }
 
+section {
+  border: 1px solid black;
+  padding: 10px; }
+
 aside {
   font-style: italic;
   margin-left: 100px;

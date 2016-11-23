@@ -42,7 +42,7 @@
     <div class='table-row'>
       <div class='table-cell-right'>Instructor:</div>
       <div class='table-cell-left'>
-        <a href='mailto:tamouse@gmail.com'>
+        <a href='mailto:tamouse@gmail.com' target='_blank'>
           Tamara Temple
         </a>
       </div>
@@ -50,7 +50,7 @@
     <div class='table-row'>
       <div class='table-cell-right'>Github:</div>
       <div class='table-cell-left'>
-        <a href='https://github.com/tamouse'>
+        <a href='https://github.com/tamouse' target='_blank'>
           tamouse
         </a>
       </div>
@@ -58,7 +58,7 @@
     <div class='table-row'>
       <div class='table-cell-right'>Twitter:</div>
       <div class='table-cell-left'>
-        <a href='https://github.com/tamouse'>
+        <a href='https://github.com/tamouse' target='_blank'>
           tamouse
         </a>
       </div>
@@ -89,7 +89,7 @@
       <a href='/' target='_blank'>Slides</a>
     </li>
     <li>
-      <a href='/pring' target='_blank'>Printed Notes</a>
+      <a href='/print' target='_blank'>Printed Notes</a>
     </li>
     <li>
       <a href='https://github.com/gdiminneapolis/html-320-stylin-with-sass-project-files/' target='_blank'>Project Files</a>
@@ -198,7 +198,12 @@ to create modular, DRY, and easily maintainable style information.</p>
 
 <section>
 
-  <p>Sass actually has two dialects:</p>
+  <p>Sass has two dialects:</p>
+
+  <ul>
+<li class="fragment">SCSS (Sassy CSS)</li>
+<li class="fragment">Indented Sass</li>
+</ul>
 
 </section>
 
@@ -217,7 +222,7 @@ not look like CSS (called “Sass”)</p>
 
 <section>
 
-  <p><strong>Normal Form:</strong> keeps all the braces (“squirly brackets”) and
+  <p><strong>Sassy Form:</strong> keeps all the braces (“squirly brackets”) and
 semi-colons that you have in CSS. White space doesn’t
 matter. (called “SCSS”)</p>
 
@@ -248,13 +253,32 @@ well.</small></p>
 
 
 <section class="">
-  <section>
+  <h1 id="what-does-sass-do">What does Sass Do?</h1>
+
+</section>
+
+
+<section class="">
+  <h3 id="compiles">Compiles!</h3>
+
+<p>Sass takes files written in Sass or SCSS and compiles them into CSS.</p>
+
+<p class="fragment">By default, it uses the same file base name.</p>
+
+<p class="fragment">For example <code class="highlighter-rouge">styles.scss</code> becomes <code class="highlighter-rouge">styles.css</code>.</p>
+
+<p class="fragment">It’s also possible to have different source and destination folders.</p>
+
+</section>
+
+
+<section class="">
   <h3 id="variables">Variables!</h3>
 
-  <p><strong>Start with SCSS:</strong></p>
+<p><strong>Start with SCSS:</strong></p>
 
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$brand-primary</span><span class="p">:</span> <span class="no">seagreen</span><span class="p">;</span>
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="nv">$brand-primary</span><span class="p">:</span> <span class="no">seagreen</span><span class="p">;</span>
 <span class="nv">$brand-accent</span><span class="p">:</span> <span class="no">tomato</span><span class="p">;</span>
 <span class="nv">$brand-bg</span><span class="p">:</span> <span class="no">honeydew</span><span class="p">;</span>
 <span class="nt">header</span> <span class="p">{</span>
@@ -262,23 +286,10 @@ well.</small></p>
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$brand-primary</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">header</span> <span class="nt">a</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nv">$brand-accent</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-  <p><strong>Get CSS!</strong></p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">header</span> <span class="p">{</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="no">honeydew</span><span class="p">;</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">seagreen</span><span class="p">;}</span>
-<span class="nt">header</span> <span class="nt">a</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">tomato</span><span class="p">;}</span></code></pre>
-  </figure>
-
-</section>
+</figure>
 
 <div class="notes">
-
-  <p>Sass dialect:</p>
+  <h3>Sass dialect:</h3>
 
   <figure class="highlight">
     <pre><code class="language-sass" data-lang="sass"><span class="nv">$brand-primary</span><span class="p">:</span> <span class="no">seagreen</span>
@@ -295,43 +306,40 @@ well.</small></p>
 
 </div>
 
+<p><strong>Get CSS!</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="nt">header</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">honeydew</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">seagreen</span><span class="p">;}</span>
+<span class="nt">header</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">tomato</span><span class="p">;}</span></code></pre>
+</figure>
+
 <p class="notes">Sass let’s you set variables that can hold values used all over
 your css files, allowing you to quick change a commonly used value
 in only one place.</p>
 
-<section>
+</section>
+
+
+<section class="">
   <h3 id="nesting">Nesting!</h3>
 
-  <p><strong>Start with SCSS:</strong></p>
+<p><strong>Start with SCSS:</strong></p>
 
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">nav</span> <span class="p">{</span>
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="nt">nav</span> <span class="p">{</span>
   <span class="nt">ul</span> <span class="p">{</span><span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
   <span class="nt">li</span> <span class="p">{</span><span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span>
   <span class="nt">a</span> <span class="p">{</span><span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
     <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span><span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
-  </figure>
-
-  <p><strong>Get CSS!</strong></p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">nav</span> <span class="nt">ul</span> <span class="p">{</span>
-  <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">nav</span> <span class="nt">li</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span>
-  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">nav</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
-    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
+</figure>
 
 <div class="notes">
-
-  <p>Sass version:</p>
+  <p><strong>Sass</strong></p>
 
   <figure class="highlight">
     <pre><code class="language-sass" data-lang="sass"><span class="nt">nav</span>
@@ -351,17 +359,32 @@ in only one place.</p>
 
 </div>
 
+<p><strong>Get CSS!</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="nt">nav</span> <span class="nt">ul</span> <span class="p">{</span>
+  <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">nav</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nt">nav</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;</span> <span class="p">}</span></code></pre>
+</figure>
+
 <p class="notes">Sass allows the nesting of CSS so you can clearly tell which rules
 apply to which parent, without endless repetition.</p>
 
-<section>
+</section>
 
+
+<section class="">
   <h3 id="mixins">Mixins!</h3>
 
-  <p><strong>Start with SCSS:</strong></p>
+<p><strong>Start with SCSS:</strong></p>
 
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">visually-hidden</span> <span class="p">{</span>
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">visually-hidden</span> <span class="p">{</span>
   <span class="nl">text-indent</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
   <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
   <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
@@ -370,24 +393,11 @@ apply to which parent, without endless repetition.</p>
   <span class="k">@include</span> <span class="nd">visually-hidden</span><span class="p">;</span>
   <span class="nl">background</span><span class="p">:</span> <span class="sx">url(logo.png)</span> <span class="nb">no-repeat</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
-  </figure>
-
-  <p><strong>Get CSS!</strong></p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nc">.image-replace</span> <span class="p">{</span>
-  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-  <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
-  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="sx">url(logo.png)</span> <span class="nb">no-repeat</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
+</figure>
 
 <div class="notes">
 
-  <p>Sass version:</p>
+  <p><strong>or Sass</strong></p>
 
   <figure class="highlight">
     <pre><code class="language-sass" data-lang="sass"><span class="nf">=visually-hidden</span>
@@ -402,50 +412,64 @@ apply to which parent, without endless repetition.</p>
 
 </div>
 
+<p><strong>Get CSS!</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="nc">.image-replace</span> <span class="p">{</span>
+  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="sx">url(logo.png)</span> <span class="nb">no-repeat</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+</figure>
+
 <p class="notes">Mixins let you specify often repeated style specification that are
 used in several independent styles. You could consider a mixin
 like a macro, where the mixin’s content gets included in the style
 specification.</p>
 
-<section>
+</section>
+
+
+<section class="">
   <h3 id="partials">Partials!</h3>
 
-  <p><strong>Start with SCSS</strong></p>
+<p><strong>Start with SCSS</strong></p>
 
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="c1">// file: _settings.scss
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="c1">// file: _settings.scss
 </span><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="mh">#690067</span><span class="p">;</span>
 
 <span class="c1">// file: styles.scss
 </span><span class="k">@import</span> <span class="s2">"settings"</span><span class="p">;</span>
 <span class="nt">header</span><span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primaryBrand</span><span class="p">;}</span></code></pre>
-  </figure>
+</figure>
 
-  <p><strong>Get CSS</strong></p>
+<div class="notes">
+
+  <p><strong>Sass</strong></p>
 
   <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="c">/* no file _settings.css */</span>
-
-<span class="c">/* file: styles.css */</span>
-<span class="nt">header</span><span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="m">#690067</span><span class="p">;}</span></code></pre>
-  </figure>
-
-  <div class="notes">
-
-    <p><strong>Sass</strong></p>
-
-    <figure class="highlight">
-      <pre><code class="language-sass" data-lang="sass"><span class="c1">// file: _settings.sass
+    <pre><code class="language-sass" data-lang="sass"><span class="c1">// file: _settings.sass
 </span><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="mh">#690067</span>
 
 <span class="c1">// file: styles.sass
 </span><span class="na">header</span><span class="p">:</span>
   <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primaryBrand</span></code></pre>
-    </figure>
+  </figure>
 
-  </div>
+</div>
 
-  <p class="notes">You can split out your Sass / SCSS declarations into several files to
+<p><strong>Get CSS</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-css" data-lang="css"><span class="c">/* no file _settings.css */</span>
+
+<span class="c">/* file: styles.css */</span>
+<span class="nt">header</span><span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="m">#690067</span><span class="p">;}</span></code></pre>
+</figure>
+
+<p class="notes">You can split out your Sass / SCSS declarations into several files to
 help you keep them all organized. Beginning the file name with the
 underscore character (‘_’) will tell the Sass preprocessor to ignore
 the file because it’s being imported and doesn’t need to have it’s own
@@ -453,765 +477,148 @@ translated CSS file.</p>
 
 </section>
 
-<section>
-
-  <h3 id="more-examples">More examples</h3>
-
-  <ul>
-    <li><a href="http://codepen.io/cfarm/pen/jteAG" target="_blank">Cross-Browser CSS3 Gradients</a></li>
-    <li><a href="http://codepen.io/cfarm/pen/rkEIo" target="_blank">Cross-Browser Box-shadow (drop shadow) effects</a></li>
-    <li><a href="http://codepen.io/andrewboyd/pen/LmIxi" target="_blank">Inner Text Shadow effect</a></li>
-    <li><a href="http://oddbird.net/demos/susy-off-canvas/" target="_blank">Off-Canvas Responsive Layout</a></li>
-    <li><a href="http://codepen.io" target="_blank">Codepen.IO</a> has lots and lots of examples.</li>
-  </ul>
-
-</section>
-
-</section>
-
 
 <section class="">
-  <section>
+  <h3 id="math">Math!</h3>
 
-  <h2 id="lets-develop-it">Let’s Develop It!</h2>
-
-  <p>In the following section, we’re going to take the project you
-cloned and turn it into one that uses Sass.</p>
-
-  <p class="fragment">Open the project in your editor (remember to open the whole project).</p>
-
-  <p class="fragment">Open the <code class="highlighter-rouge">README.md</code> file for the project. Read it all the way through
-and then go back and follow the instructions.</p>
-
-</section>
-
-<section>
-
-  <p>From the command line, check out the first exercise, and then start up
-the watcher</p>
-
-  <figure class="highlight">
-    <pre><code class="language-bash" data-lang="bash">git checkout -b exercise/01-new-sass-folder <span class="se">\</span>
-    origin/exercise/01-new-sass-folder
-npm start</code></pre>
-  </figure>
-
-  <p class="fragment">You should be able to keep the watcher running throughout the
-exercise, but you may want to shut it down when we move on.</p>
-
-</section>
-
-<section>
-
-  <h4 id="for-the-exercise-youre-going-to">For the exercise, you’re going to:</h4>
-
-  <p> </p>
-
-  <ol>
-    <li>create a directory for our SCSS files</li>
-    <li>move / rename the CSS files from the <code class="highlighter-rouge">css</code> folder to the new <code class="highlighter-rouge">sass</code> folder</li>
-    <li>change the ending on the file from <code class="highlighter-rouge">css</code> to <code class="highlighter-rouge">scss</code></li>
-  </ol>
-
-  <p> </p>
-
-  <p class="fragment">It is possible that the watcher won’t work at this point, so go ahead
-and stop it with Ctrl+C and restart it.</p>
-
-</section>
-
-</section>
-
-
-<section class="">
-  <h2 id="did-it-work">Did it work?</h2>
-
-<iframe src="//giphy.com/embed/OcZp0maz6ALok" width="480" height="480" frameborder="0" class="giphy-embed fragment noprint" allowfullscreen=""></iframe>
-
-<p class="notes"> <a href="http://giphy.com/gifs/30-rock-liz-lemon-i-love-this-show-OcZp0maz6ALok">
-Tina Fey from 30 Rock via GIPHY</a> </p>
-
-</section>
-
-
-<section class="">
-  <h2 id="lets-take-a-break">Let’s take a break</h2>
-
-<iframe src="//giphy.com/embed/ypqHf6pQ5kQEg" width="480" height="525" frameborder="0" class="giphy-embed noprint" allowfullscreen=""></iframe>
-
-<div class="hide-gif noprint">
-  <p>Hide Gif</p>
-</div>
-
-<p class="notes"><a href="http://giphy.com/gifs/ypqHf6pQ5kQEg">Seal
-‘Sup via GIPHY</a></p>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="sass-features-in-depth">Sass Features In Depth</h2>
-
-  <p>Now we are going to dig into some of the cool features Sass has to offer.</p>
-
-</section>
-
-</section>
-
-
-<section class="">
-  <section>
-  <h2 id="nesting">Nesting</h2>
-
-  <p class="fragment">Nesting in Sass/SCSS gives the ability to condense your code
-and let you list your selectors using the same hierarchy you
-see in your HTML code.</p>
-
-  <p class="fragment">There is a caveat, however, in that you should <strong>not</strong> nest
-your selectors too deeply.</p>
-
-  <p class="fragment">A good rule of thumb is to nest no more than 3 levels deep
-and use more specific selectors to target specific layout
-needs.</p>
-</section>
-
-<section>
-
-  <h3 id="scss-input">SCSS input:</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">header</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
-    <span class="nt">nav</span> <span class="p">{</span>
-        <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
-        <span class="nt">a</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span> <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="css-output">CSS output:</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nt">header</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">header</span> <span class="nt">nav</span> <span class="p">{</span> <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">header</span> <span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <p>Sass dialect:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nt">header</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">black</span>
-  <span class="nt">nav</span>
-    <span class="nl">background</span><span class="p">:</span> <span class="no">red</span>
-    <span class="nt">a</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="no">white</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="parent-selectors">Parent Selectors</h2>
-
-  <p class="fragment">Sometimes it’s useful to use a nested rule’s parent selector in other
-ways than the default.</p>
-
-  <p class="fragment">For instance, you might want to have special
-styles for when that selector is hovered over or for when the body
-element has a certain class.</p>
-
-  <p class="fragment">In these cases, you can explicitly
-specify where the parent selector should be inserted using the <code class="highlighter-rouge">&amp;</code>
-character.</p>
-
-</section>
-
-<section>
-
-  <h3 id="sass-input">Sass input:</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">nav</span> <span class="p">{</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
-  <span class="nt">a</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
-    <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span> <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="css-output">CSS output:</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nt">nav</span> <span class="p">{</span> <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">nav</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span> <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <h3 id="sass-dialect">Sass dialect:</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nt">nav</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="no">red</span>
-  <span class="nt">a</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span>
-    <span class="k">&amp;</span><span class="nd">:hoever</span>
-      <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <h2 id="lets-develop-it">Let’s Develop It!</h2>
-
-<div>
-  <ul>
-  <li>Open your <span class="blue">styles.scss</span> file</li>
-  <li>Rewrite some styles to use nesting and referencing the parent</li>
-  <li>Look for selectors that share a common parent HTML element, like header, nav, footer, #main</li>
-  <li>Look for hover styles, or add some, to practice referencing the parent with <span class="blue">&amp;</span>
-</li>
-  <li>There are lots of possible solutions! Be creative!</li>
-  <li>Run the <code class="pink">sass --watch</code> command to see your changes in the browser</li>
-</ul>
-</div>
-
-<aside class="notes">
-  <p>
-    Your <code class="pink">sass --watch</code> command might still
-    be running from before. It’s quite
-    okay if it is, it will pick up the edits as you go along saving
-    your changes and re-compile the changed .scss files into .css. You
-    should just need to keep refreshing your browser as usual.
-  </p>
-</aside>
-
-</section>
-
-
-<section class="">
-  <h2 id="take-a-break">Take a break</h2>
-
-<iframe src="//giphy.com/embed/Eq7T3GwDAlggE" width="480" height="327" frameborder="0" class="giphy-embed noprint" allowfullscreen=""></iframe>
-
-<div class="hide-gif noprint">
-  <p>Hide Gif</p>
-</div>
-
-<p class="notes">
-
-<a href="http://giphy.com/gifs/cheezburger-funny-dog-Eq7T3GwDAlggE">Roomba
-Dog via GIPHY</a>
-
-</p>
-
-</section>
-
-
-<section class="">
-  <h2 id="variables">Variables</h2>
-
-<div class="left-align">
-  <p>Sometimes you want to reuse a value for a style - you use them frequently, they’re hard to type or remember, such as</p>
-  <ul class="gowide">
-  <li class="fragment">Colors
-    <pre><code contenteditable="" class="sass css">#2a79af</code></pre>
-  </li>
-  <li class="fragment"><a target="_blank" href="http://cssfontstack.com/">Font stack styles</a>
-    <pre><code contenteditable="" class="sass css">Georgia, Times, "Times New Roman", serif;</code></pre>
-  </li>
-  <li class="fragment">Font sizes
-    <pre><code contenteditable="" class="sass css">1.667em</code></pre>
-  </li>
-</ul>
-</div>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="defining-variables">Defining Variables</h2>
-
-  <p>Variables with Sass let us reuse values more than once, while only
-defining them in one place:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="c1">//define variable using dollar sign:
-</span>
-<span class="nv">$brandColor</span><span class="p">:</span> <span class="mh">#f90000</span><span class="p">;</span>
-<span class="nv">$mainTextcolor</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
-<span class="nv">$accentColor</span><span class="p">:</span> <span class="mh">#ccc</span><span class="p">;</span></code></pre>
-  </figure>
-
-  <p class="fragment">To create a variable you need a dollar sign before the name of your
-variable, and a colon: to give it a <strong>value</strong></p>
-
-  <p class="fragment">Note that in Sass files, you can comment out a line with <code class="highlighter-rouge">// two slashes</code></p>
-
-</section>
-
-<section>
-
-  <h3 id="defining-variables-1">Defining Variables</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$brandColor</span><span class="p">:</span> <span class="mh">#f90000</span><span class="p">;</span> <span class="c1">// red
-</span><span class="nv">$mainTextcolor</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span> <span class="c1">// white
-</span><span class="nv">$accentColor</span><span class="p">:</span> <span class="mh">#ccc</span><span class="p">;</span> <span class="o">//</span> <span class="nt">grey</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">header</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$mainTextColor</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$brandColor</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.content</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$mainTextColor</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$accentColor</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">footer</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$accentColor</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$brandColor</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <p>Sass dialect:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nv">$brandColor</span><span class="p">:</span> <span class="mh">#f90000</span> <span class="o">//</span> <span class="no">red</span>
-<span class="nv">$mainTextcolor</span><span class="p">:</span> <span class="mh">#fff</span> <span class="o">//</span> <span class="no">white</span>
-<span class="nv">$accentColor</span><span class="p">:</span> <span class="mh">#ccc</span> <span class="o">//</span> <span class="n">grey</span>
-
-<span class="nt">header</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$mainTextColor</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$brandColor</span>
-
-<span class="nc">.content</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$mainTextColor</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$accentColor</span>
-
-<span class="nt">footer</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$accentColor</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$brandColor</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h3 id="keep-em-together">Keep ‘em Together</h3>
-
-  <p>Variables are easy to change if you keep them all in one stylesheet,
-and update or add to the styles as needed</p>
-
-  <p class="fragment">Let’s define some variables:</p>
-
-</section>
-
-<section>
-
-  <h3 id="colors">Colors</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="c1">// Colors
-</span><span class="nv">$favoriteColor</span><span class="p">:</span> <span class="mh">#2a79af</span><span class="p">;</span>
-<span class="nv">$anotherColor</span><span class="p">:</span> <span class="mh">#f05b62</span><span class="p">;</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="fonts">Fonts</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="c1">// Font Stacks
-</span><span class="nv">$favoriteFont</span><span class="p">:</span> <span class="n">Papyrus</span><span class="o">,</span> <span class="nb">fantasy</span><span class="p">;</span>
-<span class="nv">$aPracticalFont</span><span class="p">:</span> <span class="s2">"Trebuchet MS"</span><span class="o">,</span>
-  <span class="s2">"Lucida Grande"</span><span class="o">,</span> <span class="s2">"Lucida Sans Unicode"</span><span class="o">,</span>
-  <span class="s2">"Lucida Sans"</span><span class="o">,</span> <span class="n">Tahoma</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
-
-<span class="c1">// Font sizes
-</span><span class="nv">$aNiceBigFontSize</span><span class="p">:</span> <span class="m">1</span><span class="mi">.2em</span><span class="p">;</span>
-<span class="nv">$finePrint</span><span class="p">:</span> <span class="m">9px</span><span class="p">;</span>
-<span class="nv">$giantLogo</span><span class="p">:</span> <span class="m">36px</span><span class="p">;</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="margins-and-padding">Margins and Padding</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$defaultMargin</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
-<span class="nv">$defaultPadding</span><span class="p">:</span> <span class="nv">$defaultMargin</span><span class="p">;</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <h2 id="sass">Sass</h2>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="c1">// Let's define some variables
-// Colors
-</span><span class="nv">$favoriteColor</span><span class="p">:</span> <span class="mh">#2a79af</span>
-<span class="nv">$anotherColor</span><span class="p">:</span> <span class="mh">#f05b62</span>
-
-<span class="c1">// Fonts
-</span><span class="nv">$favoriteFont</span><span class="p">:</span> <span class="n">Papyrus</span><span class="o">,</span> <span class="nb">fantasy</span>
-<span class="nv">$aPracticalFont</span><span class="p">:</span> <span class="s2">"Trebuchet MS"</span><span class="o">,</span> <span class="s2">"Lucida Grande"</span><span class="o">,</span> <span class="s2">"Lucida Sans Unicode"</span><span class="o">,</span>
-  <span class="s2">"Lucida Sans"</span><span class="o">,</span> <span class="nt">Tahoma</span><span class="o">,</span> <span class="nt">sans-serif</span>
-
-<span class="c1">// Font sizes
-</span><span class="nv">$aNiceBigFontSize</span><span class="p">:</span> <span class="m">16px</span>
-<span class="nv">$finePrint</span><span class="p">:</span> <span class="m">10px</span>
-<span class="nv">$giantLogo</span><span class="p">:</span> <span class="m">36px</span>
-
-<span class="c1">// Margins and Padding
-</span><span class="nv">$defaultMargin</span><span class="p">:</span> <span class="m">15px</span>
-<span class="nv">$defaultPadding</span><span class="p">:</span> <span class="nv">$defaultMargin</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-  <h3>Let's Develop It! - Variables</h3>
-  <div class='left-align go-wide'>
-    <ol>
-      <li class='fragment'>
-        Create a new Sass stylesheet called
-        <code>_settings.scss</code>
-        <ul>
-          <li class='fragment'>The underscore at the beginning is important</li>
-        </ul>
-      </li>
-      <li class='fragment'>
-        Put it in the right folder!
-        <ul>
-          <li class='fragment'>
-            It should go in
-            <code>stylesheets/scss/</code>
-          </li>
-        </ul>
-      </li>
-      <li class='fragment'>
-        Import your new stylesheet into
-        <code>styles.scss</code>
-        with
-        <code>@import "settings";</code>
-        <ul>
-          <li class='fragment'>
-            Leave the underscore
-            <em>off</em>
-            in the
-            <code>@import</code>
-            statement
-          </li>
-        </ul>
-      </li>
-      <li class='fragment'>
-        Find things that can be turned into variables in your styles.scss
-        file, and make them variables in the
-        <code>_settings.scss</code>
-        file
-      </li>
-      <li class='fragment'>
-        One of the best things to start with are the colors
-      </li>
-    </ol>
-    <div class='fragment'>
-      You may find that working in a split screen makes this a lot easier.
-    </div>
-  </div>
-</section>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="math-operations">Math Operations</h2>
-
-  <div class="left-align go-wide">
-
-    <p>With CSS you have to be explicit about everything, including numbers.</p>
-
-    <div class="fragment">
-
-      <p>With Sass, you can write math to calculate numbers for you:</p>
-
-      <ul>
-        <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a></li>
-        <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Subtraction</a></li>
-        <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Multiplication</a></li>
-        <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#division-and-slash">Division</a></li>
-      </ul>
-
-    </div>
-
-  </div>
-
-  <p class="fragment small">division is special, check the documentation link for why and how</p>
-
-</section>
-
-<section>
-
-  <p>Sass input:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$layoutWidth</span><span class="p">:</span> <span class="m">960px</span><span class="p">;</span>
-<span class="nv">$defaultPadding</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-<span class="nn">#sidebar</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="nv">$layoutWidth</span><span class="o">/</span><span class="m">3</span><span class="p">;</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nn">#main</span> <span class="p">{</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$defaultPadding</span><span class="p">;</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="p">(</span><span class="nv">$layoutWidth</span><span class="o">/</span><span class="m">3</span><span class="p">)</span><span class="o">*</span><span class="m">2</span> <span class="o">-</span> <span class="nv">$defaultPadding</span><span class="o">*</span><span class="m">2</span><span class="p">;</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
-  <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
-    <span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span>
-    <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>CSS output:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nf">#sidebar</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">320px</span><span class="p">;</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span> <span class="p">}</span>
-<span class="nf">#main</span> <span class="p">{</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">608px</span><span class="p">;</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span> <span class="p">}</span>
-<span class="nf">#main</span><span class="nd">:after</span> <span class="p">{</span>
-  <span class="nl">content</span><span class="p">:</span> <span class="s2">''</span><span class="p">;</span>
-  <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <p>Sass dialect:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nv">$layoutWidth</span><span class="p">:</span> <span class="m">960px</span>
-<span class="nv">$defaultPadding</span><span class="p">:</span> <span class="m">16px</span>
-
-<span class="nn">#sidebar</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="nv">$layoutWidth</span> <span class="o">/</span> <span class="m">3</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span>
-
-<span class="nn">#main</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="nv">$defaultPadding</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="nv">$layoutWidth</span> <span class="o">/</span> <span class="m">3</span> <span class="o">*</span> <span class="m">2</span> <span class="o">-</span> <span class="nv">$defaultPadding</span> <span class="o">*</span> <span class="m">2</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span>
-
-  <span class="k">&amp;</span><span class="nd">:after</span>
-    <span class="nl">content</span><span class="p">:</span> <span class="s1">''</span>
-    <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span></code></pre>
-  </figure>
-
-  <p>Make sure to clear your floats after #main!</p>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-  <h2>Let's Develop It!</h2>
-  <ol>
-    <li class='fragment'>
-      Write a math expression in Sass to calculate the width of elements
-      in your page layout instead of declaring a number explicitly
-    </li>
-    <li class='fragment'>
-      Use variables to represent the results of your calcuation
-    </li>
-    <li class='fragment'>
-      Write them in
-      <code>_settings.scss</code>
-    </li>
-    <li class='fragment'>
-      Ensure your
-      <code>sass</code>
-      command is still running,
-      and refresh your page.
-    </li>
-  </ol>
-</section>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="color-functions">Color Functions</h2>
-
-  <p>Color manipulation functions are built in to Sass</p>
-
-  <ul>
-    <li>
-      <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method" target="_blank" title="darken method documentation">
-darken
-</a>
- – darkens a color <br /> <code class="pink">darken($color, $amount)</code></p>
-    </li>
-    <li>
-      <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method" target="_blank" title="lighten method documentation">
-lighten
-</a>
- – lightens a color <br /> <code class="pink">lighten($color, $amount)</code></p>
-    </li>
-    <li>
-      <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#opacify-instance_method" target="_blank" title="opacify method documentation">
-opacify
-</a>
- – makes a color more opaque <br /> <code class="pink">opacify($color, $amount)</code></p>
-    </li>
-    <li>
-      <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#transparentize-instance_method" target="_blank" title="transparentize method documentation">
-transparentize
-</a>
- – makes a color more transparent <br /> <code class="pink">transparentize($color, $amount)</code></p>
-    </li>
-  </ul>
-
-</section>
-
-<section>
-
-  <h3 id="color-functions-example">Color Functions Example</h3>
-
-  <p>Start with SCSS:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$background</span><span class="p">:</span> <span class="mh">#f3f3f3</span><span class="p">;</span>
-<span class="nv">$text_color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$background</span><span class="o">,</span> <span class="m">30%</span><span class="p">);</span>
-<span class="nv">$accent_color</span><span class="p">:</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$text_color</span><span class="o">,</span> <span class="m">10</span><span class="p">);</span>
-<span class="nt">body</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$text_color</span><span class="p">;</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="nv">$background</span><span class="p">;</span>
-  <span class="nt">a</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="nv">$accent_color</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="color-functions-example-1">Color Functions Example</h3>
-
-  <p>Get CSS:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="m">#a7a7a7</span><span class="p">;</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="m">#f3f3f3</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">body</span> <span class="nt">a</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">silver</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nv">$background</span><span class="p">:</span> <span class="mh">#f3f3f3</span>
-<span class="nv">$text_color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$background</span><span class="o">,</span> <span class="m">30%</span><span class="p">)</span>
-<span class="nv">$accent_color</span><span class="p">:</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$text_color</span><span class="o">,</span> <span class="m">10</span><span class="p">)</span>
-
-<span class="nt">body</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$text_color</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="nv">$background</span>
-
-  <span class="nt">a</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="nv">$accent_color</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <h2 id="lets-develop-it">Let’s Develop It!</h2>
-
-<p>Add/change variables in <code class="highlighter-rouge">_settings.scss</code> file to use color functions</p>
-
-<p>Changing <code class="highlighter-rouge">:hover</code> and <code class="highlighter-rouge">:active</code> is a great thing to use colour functions for</p>
+<p><strong>Start with SCSS</strong></p>
 
 <figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="nv">$primary-btn</span><span class="p">:</span> <span class="s1">'mediumblue'</span><span class="p">;</span>
-<span class="nv">$primary-btn-hov</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$primary-button</span><span class="o">,</span> <span class="m">20</span><span class="p">)</span>
+  <pre><code class="language-scss" data-lang="scss"><span class="nv">$laptopMinimum</span><span class="p">:</span> <span class="m">960px</span><span class="p">;</span>
+<span class="nv">$spacing</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
 
-<span class="n">button-primary</span> <span class="p">{</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primary-btn</span><span class="p">;</span>
-  <span class="k">&amp;</span><span class="nd">:hover</span><span class="o">,</span> <span class="k">&amp;</span><span class="nd">:active</span> <span class="p">{</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$pimary-btn-hov</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nv">$laptopMinimum</span> <span class="o">+</span> <span class="nv">$spacing</span> <span class="o">*</span> <span class="m">2</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
+</figure>
+
+<div class="notes">
+  <p><strong>Or Sass</strong></p>
+
+  <figure class="highlight">
+    <pre><code class="language-sass" data-lang="sass"><span class="nv">$laptopMinimum</span><span class="p">:</span> <span class="m">960px</span>
+<span class="nv">$spacing</span><span class="p">:</span> <span class="m">10px</span>
+
+<span class="nc">.container</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nv">$laptopMinimum</span> <span class="o">+</span> <span class="p">(</span><span class="nv">$spacing</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span></code></pre>
+  </figure>
+
+</div>
+
+<p><strong>Get CSS!</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-css" data-lang="css"><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">980px</span><span class="p">;</span> <span class="p">}</span></code></pre>
+</figure>
+
+<div class="notes">
+
+  <p>Math operations include:</p>
+
+  <ul>
+    <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations" target="_blank">addition <code class="highlighter-rouge">+</code></a></li>
+    <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations" target="_blank">subtraction <code class="highlighter-rouge">-</code></a></li>
+    <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations" target="_blank">multiplication <code class="highlighter-rouge">*</code></a></li>
+    <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#division-and-slash" target="_blank">division <code class="highlighter-rouge">/</code></a></li>
+  </ul>
+
+</div>
+
+</section>
+
+
+<section class="">
+  <h3 id="colours">Colours!</h3>
+
+<p><strong>Start with SCSS</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="n">MediumBlue</span><span class="p">;</span>
+<span class="nv">$secondaryBrand</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$primaryBrand</span><span class="o">,</span> <span class="m">25%</span><span class="p">);</span>
+
+<span class="nc">.site-header</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondaryBrand</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+</figure>
+
+<div class="notes">
+
+  <p><strong>Or Sass</strong></p>
+
+  <figure class="highlight">
+    <pre><code class="language-sass" data-lang="sass"><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="n">MediumBlue</span>
+<span class="nv">$secondaryBrand</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$primaryBrand</span><span class="o">,</span> <span class="m">25%</span><span class="p">)</span>
+<span class="nc">.site-header</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondaryBrand</span></code></pre>
+  </figure>
+
+</div>
+
+<p><strong>Get CSS!</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-css" data-lang="css"><span class="nc">.site-header</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#00004e</span><span class="p">;</span> <span class="p">}</span></code></pre>
+</figure>
+
+<div class="notes">
+
+  <p>Color transformations include:
+* darken
+* lighten
+* opacify
+* transparentize</p>
+
+</div>
+
+</section>
+
+
+<section class="">
+  <h3 id="comments">Comments!</h3>
+
+<p>There are two types of comments, ones which are passed through to the
+CSS and ones which are not.</p>
+
+<p><strong>Start with SCSS</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="cm">/* Multi-line comments
+ * are passed through
+ */</span>
+<span class="c1">// single line comments are not
+</span><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+</figure>
+
+<div class="notes">
+
+  <p><strong>or Sass</strong></p>
+
+  <figure class="highlight">
+    <pre><code class="language-sass" data-lang="sass"><span class="cm">/* Multi-line comments
+</span>  <span class="cm">* are passed through
+</span>  <span class="cm">*
+</span><span class="c1">// single line comments are not
+</span><span class="nt">body</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span></code></pre>
+  </figure>
+
+</div>
+
+<p><strong>End with CSS</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-css" data-lang="css"><span class="c">/* Multi-line comments
+ * are passed through
+ */</span>
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="p">}</span></code></pre>
 </figure>
 
 
@@ -1219,1276 +626,54 @@ transparentize
 
 
 <section class="">
-  <section>
+  <h3 id="loops">Loops!</h3>
 
-  <h2 id="comments-in-scss">Comments in SCSS</h2>
+<p><strong>Start with SCSS</strong></p>
 
-  <p class="fragment">Sass allows both multi-line <em>and</em> single-line comments.</p>
-
-  <p class="fragment">Multi-line comments are passed through to the compiled CSS.</p>
-
-  <p class="fragment">Single-line comments are not passed through.</p>
-
-  <p class="fragment">This is useful for hiding development notes from the end site.</p>
-
-</section>
-
-<section>
-
-  <h3 id="comments-in-scss-example-scss">Comments in SCSS Example SCSS</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="cm">/* Multi-line comments
- * are passed through
- */</span>
-<span class="c1">// single line comments are not
-</span><span class="nv">$layoutWidth</span><span class="p">:</span> <span class="m">960px</span><span class="p">;</span>
-
-<span class="nt">body</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="nv">$layoutWidth</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="comments-in-scss-compiled-css">Comments in SCSS Compiled CSS</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="c">/* Multi-line comments
- * are passed through
- */</span>
-<span class="nt">body</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">960px</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="cm">/* Multi-line comments
-</span>  <span class="cm">* are passed through
-</span>  <span class="cm">*/
-</span><span class="c1">// single line comments are not
-</span><span class="nv">$layoutWidth</span><span class="p">:</span> <span class="m">960px</span>
-<span class="nt">body</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="nv">$layoutWidth</span></code></pre>
-  </figure>
-
-  <p><strong>NOTE:</strong> In Sass dialect, you have to preserve the indentation on the
-multiline comment, so the parser understands that it’s part of the
-comment body. This can be rather disconcting at first, but given
-the nature of white-space indent parsers, it does make sense.</p>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <h1 id="lets-take-a-break">Let’s take a break</h1>
-
-<iframe src="//giphy.com/embed/TUdJ5Bwl97oyI" width="480" height="270" frameborder="0" class="giphy-embed noprint" allowfullscreen=""></iframe>
-
-<div class="hide-gif noprint">
-  <p>Hide Gif</p>
-</div>
-
-<p class="notes"><a href="http://giphy.com/gifs/TUdJ5Bwl97oyI">Munching Gophers via GIPHY</a></p>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="mixins">Mixins</h2>
-
-  <p class="fragment"><strong>Mixins</strong> are collections of style attributes that can be reused,
-similarly to the way variables allow the reuse of values.</p>
-
-  <p class="fragment">They are quite useful for creating common settings for different
-elements and components to create a unified look and feel.</p>
-
-  <p class="fragment">These come in very handy for CSS effects, such as:</p>
-
-  <p class="fragment green">gradients</p>
-
-  <p class="fragment blue">drop shadows</p>
-
-  <p class="fragment">browser prefixes</p>
-
-  <p class="fragment pink">clearing floats</p>
-
-</section>
-
-<section>
-
-  <h3 id="mixins-example-scss">Mixins Example SCSS</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">dropshadow</span><span class="p">(</span><span class="nv">$text</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$text</span><span class="p">;</span>
-  <span class="nl">text-shadow</span><span class="p">:</span> <span class="m">2px</span> <span class="m">4px</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$text</span><span class="o">,</span> <span class="m">40%</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nt">h1</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">dropshadow</span><span class="p">(</span><span class="no">black</span><span class="p">);</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h1-size</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">h2</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">dropshadow</span><span class="p">(</span><span class="no">darkblue</span><span class="p">);</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h2-size</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="mixins-compiled-css">Mixins Compiled CSS</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
-  <span class="nl">text-shadow</span><span class="p">:</span> <span class="m">2px</span> <span class="m">4px</span> <span class="m">#666666</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">3.6em</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">h2</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">darkblue</span><span class="p">;</span>
-  <span class="nl">text-shadow</span><span class="p">:</span> <span class="m">2px</span> <span class="m">4px</span> <span class="m">#5858ff</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2.4em</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <p>SASS:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nv">$base-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.2em</span>
-<span class="nv">$h1-size</span><span class="p">:</span> <span class="p">(</span><span class="nv">$base-size</span> <span class="o">*</span> <span class="m">3</span><span class="p">)</span>
-<span class="nv">$h2-size</span><span class="p">:</span> <span class="p">(</span><span class="nv">$base-size</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span>
-
-<span class="nf">=dropshadow</span><span class="p">(</span><span class="nv">$text</span><span class="p">)</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$text</span>
-  <span class="nl">text-shadow</span><span class="p">:</span> <span class="m">2px</span> <span class="m">4px</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$text</span><span class="o">,</span> <span class="m">40%</span><span class="p">)</span>
-<span class="nt">h1</span>
-  <span class="nd">+dropshadow</span><span class="p">(</span><span class="no">black</span><span class="p">)</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h1-size</span>
-<span class="nt">h2</span>
-  <span class="nd">+dropshadow</span><span class="p">(</span><span class="no">darkblue</span><span class="p">)</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$h2-size</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="clearfix-mixin">Clearfix Mixin</h2>
-
-  <p>A very common problem is to define a section of your page with
-elements that are based upon <strong>floats</strong>.</p>
-
-  <p class="fragment">You have to “clear” your floats before you begin the next
-section, or else the browser will cram the next bit up against the
-last float.</p>
-
-  <p class="fragment">The most common method in use today uses the
-pseudo-elements <code class="highlighter-rouge">:before</code>
-and <code class="highlighter-rouge">:after</code> to handle the clear, avoiding
-the need to create extra markup.</p>
-
-  <p class="fragment">Often a <code class="highlighter-rouge">.clearfix</code> class is used on
-elements, but here we’re going to build it in via a mixin.</p>
-
-</section>
-
-<section>
-
-  <h3 id="clearfix-mixin-1">Clearfix Mixin</h3>
-
-  <p>Start with SCSS</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">clearfix</span> <span class="p">{</span>
-  <span class="k">&amp;</span><span class="nd">:before</span><span class="o">,</span> <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
-    <span class="nl">content</span><span class="p">:</span> <span class="s2">" "</span><span class="p">;</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">table</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
-    <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span> <span class="p">{</span>
+  <span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
-  </figure>
+</figure>
 
-</section>
+<div class="notes">
 
-<section>
-
-  <h3 id="clearfix-mixin-2">Clearfix Mixin</h3>
-
-  <p>Use in SCSS</p>
+  <p><strong>or Sass</strong></p>
 
   <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nc">.row</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">clearfix</span><span class="p">;</span>
-  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.row</span> <span class="o">&gt;</span> <span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
+    <pre><code class="language-sass" data-lang="sass"><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span>
+  <span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span></code></pre>
   </figure>
-
-</section>
-
-<section>
-
-  <h3 id="clearfix-mixin-3">Clearfix Mixin</h3>
-  <p>Compiled CSS</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.row</span> <span class="p">{</span>
-  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.row</span><span class="nd">:before</span><span class="o">,</span> <span class="nc">.row</span><span class="nd">:after</span> <span class="p">{</span>
-  <span class="nl">content</span><span class="p">:</span> <span class="s1">" "</span><span class="p">;</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="n">table</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.row</span><span class="nd">:after</span> <span class="p">{</span>
-  <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.row</span> <span class="o">&gt;</span> <span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nf">=clearfix</span>
-  <span class="k">&amp;</span><span class="nd">:before</span><span class="o">,</span> <span class="k">&amp;</span><span class="nd">:after</span>
-    <span class="nl">content</span><span class="p">:</span> <span class="s2">" "</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">table</span>
-  <span class="k">&amp;</span><span class="nd">:after</span>
-    <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span>
-<span class="nc">.row</span>
-  <span class="nd">+clearfix</span>
-  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">10px</span>
-  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">10px</span>
-<span class="nc">.row</span> <span class="o">&gt;</span> <span class="nc">.box</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <h2 id="lets-develop-it">Let’s Develop It!</h2>
-
-<div class="go-wide">
-
-  <ul>
-    <li>Create a new file <code class="highlighter-rouge">_tools.scss</code> in the <code class="highlighter-rouge">stylesheets/scss/</code> folder</li>
-    <li>Import this into <code class="highlighter-rouge">styles.scss</code></li>
-    <li>Create the <code class="highlighter-rouge">clearfix</code> mixin</li>
-    <li>Try adding/replacing gradients with mixins in the <code class="highlighter-rouge">_tools.scss</code> file</li>
-    <li>Use the mixins in your <code class="highlighter-rouge">styles.scss</code> file</li>
-    <li>Add different types of comments that describe the mixins and see if
-they appear in the final CSS in your browser</li>
-  </ul>
 
 </div>
 
-<aside class="notes">
+<p><strong>Get CSS!</strong></p>
 
-  <p>Here’s <code class="highlighter-rouge">clearfix</code> again:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">clearfix</span> <span class="p">{</span>
-  <span class="k">&amp;</span><span class="nd">:before</span><span class="o">,</span> <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
-    <span class="nl">content</span><span class="p">:</span> <span class="s2">" "</span><span class="p">;</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">table</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
-    <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <p>And then including it:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nc">.row</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">clearfix</span><span class="p">;</span>
-  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.row</span> <span class="o">&gt;</span> <span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-  <span class="nl">margin</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">max-width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
-  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <p>And how it would be in your HTML using the above:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>This is what follows the boxes row<span class="nt">&lt;/p&gt;</span></code></pre>
-  </figure>
-
-  <p>Without the <code class="highlighter-rouge">clearfix</code>, the paragraph following the row div would be mingled with
-the floated boxes.</p>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <h2 id="lets-take-a-break">Let’s Take a Break</h2>
-
-<p>Stand up, stretch, do a power pose!</p>
-
-<iframe src="//giphy.com/embed/IiQeEg4iYJ53q" width="480" height="409" frameborder="0" class="giphy-embed noprint" allowfullscreen=""></iframe>
-
-<div class="hide-gif noprint">
-  <p>Hide Gif</p>
-</div>
-
-<p class="notes"><a href="http://giphy.com/gifs/getting-busy-stretches-IiQeEg4iYJ53q">
-Squirrel Stretch via GIPHY</a>
-</p>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="multiple-arguments">Multiple Arguments</h2>
-
-  <p>Mixins can take multiple arguments, as we saw with the gradient mixin:</p>
-
-</section>
-
-<section>
-
-  <p>Defining the mixin:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">-webkit-linear-gradient</span><span class="p">(</span>
-    <span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">);</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">-moz-linear-gradient</span><span class="p">(</span>
-    <span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">);</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span>
-    <span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">);</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>Calling the mixin:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">h1</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">gradient</span><span class="p">(</span><span class="no">darkblue</span><span class="o">,</span>
-    <span class="nf">lighten</span><span class="p">(</span><span class="no">darkblue</span><span class="o">,</span> <span class="m">40</span><span class="p">));</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>Results in the following CSS:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="n">-webkit-linear-gradient</span><span class="p">(</span>
-    <span class="no">darkblue</span><span class="p">,</span> <span class="m">#5858ff</span><span class="p">,</span> <span class="no">darkblue</span><span class="p">);</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="n">-moz-linear-gradient</span><span class="p">(</span>
-    <span class="no">darkblue</span><span class="p">,</span> <span class="m">#5858ff</span><span class="p">,</span> <span class="no">darkblue</span><span class="p">);</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span>
-    <span class="no">darkblue</span><span class="p">,</span> <span class="m">#5858ff</span><span class="p">,</span> <span class="no">darkblue</span><span class="p">);</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>Which looks a lot cleaner in the main SCSS file</p>
-
-</section>
-
-<aside class="notes">
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nf">=gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="p">)</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">-webkit-linear-gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">)</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">-moz-linear-gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">)</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">)</span>
-<span class="nt">h1</span>
-  <span class="nd">+gradient</span><span class="p">(</span><span class="no">darkblue</span><span class="o">,</span> <span class="nf">lighten</span><span class="p">(</span><span class="no">darkblue</span><span class="o">,</span> <span class="m">40</span><span class="p">))</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="argument-defaults">Argument Defaults</h2>
-
-  <p>You can also specify <strong>default</strong> values for
-arguments, for next-level laziness (a good thing!):</p>
-
-</section>
-
-<section>
-
-  <p>Take this mixin definition:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">:</span> <span class="mh">#fff</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">:</span> <span class="mh">#666</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="na">backgound-image</span><span class="p">:</span> <span class="nf">-webkit-linear-gradient</span><span class="p">(</span>
-    <span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">);</span>
-  <span class="na">backgound-image</span><span class="p">:</span> <span class="nf">-moz-linear-gradient</span><span class="p">(</span>
-    <span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">);</span>
-  <span class="na">backgound-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span>
-    <span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">);</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>And call it like so, without any parameters:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">h1</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">gradient</span><span class="p">;</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>And you get the following CSS:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
-  <span class="py">backgound-image</span><span class="p">:</span> <span class="n">-webkit-linear-gradient</span><span class="p">(</span>
-    <span class="m">#fff</span><span class="p">,</span> <span class="m">#666</span><span class="p">,</span> <span class="m">#fff</span><span class="p">);</span>
-  <span class="py">backgound-image</span><span class="p">:</span> <span class="n">-moz-linear-gradient</span><span class="p">(</span>
-    <span class="m">#fff</span><span class="p">,</span> <span class="m">#666</span><span class="p">,</span> <span class="m">#fff</span><span class="p">);</span>
-  <span class="py">backgound-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span>
-    <span class="m">#fff</span><span class="p">,</span> <span class="m">#666</span><span class="p">,</span> <span class="m">#fff</span><span class="p">);</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>Let’s look at an example on Codepen:</p>
-
-  <p><a href="http://codepen.io/tamouse/pen/gMbpmb" target="_blank" title="example">
-Example
-</a></p>
-
-</section>
-
-<aside class="notes">
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nf">=gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">:</span> <span class="mh">#fff</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">:</span> <span class="mh">#666</span><span class="p">)</span>
-  <span class="na">backgound-image</span><span class="p">:</span> <span class="nf">-webkit-linear-gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">)</span>
-  <span class="na">backgound-image</span><span class="p">:</span> <span class="nf">-moz-linear-gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">)</span>
-  <span class="na">backgound-image</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="nv">$color1</span><span class="o">,</span> <span class="nv">$color2</span><span class="o">,</span> <span class="nv">$color1</span><span class="p">)</span>
-
-<span class="nt">h1</span>
-  <span class="nd">+gradient</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="interpolation">Interpolation</h2>
-
-  <p>Sometimes, you want to get a variable right next to a piece of text,
-like in the <code class="highlighter-rouge">rotate</code> mixin. To do this, you use a special syntax:
-<code class="highlighter-rouge">#{expr}</code></p>
-
-</section>
-
-<section>
-
-  <p>Given this SCSS:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">rotate</span><span class="p">(</span><span class="nv">$degree</span><span class="o">,</span> <span class="nv">$position</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nl">transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">);</span>
-  <span class="nl">transform-origin</span><span class="p">:</span> <span class="nv">$position</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.card</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">rotate</span><span class="p">(</span><span class="m">5</span><span class="o">,</span> <span class="nb">top</span><span class="p">);</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>With interpolation, you get this CSS:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.card</span> <span class="p">{</span>
-  <span class="nl">transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">5deg</span><span class="p">);</span>
-  <span class="nl">transform-origin</span><span class="p">:</span> <span class="nb">top</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <p>Sass:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nf">=rotate</span><span class="p">(</span><span class="nv">$degree</span><span class="o">,</span> <span class="nv">$position</span><span class="p">)</span>
-  <span class="nl">transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">)</span>
-  <span class="nl">transform-origin</span><span class="p">:</span> <span class="nv">$position</span>
-
-<span class="nc">.card</span>
-  <span class="nd">+rotate</span><span class="p">(</span><span class="m">5</span><span class="o">,</span> <span class="nb">top</span><span class="p">)</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="extend">Extend</h2>
-
-  <p>Sometimes we’ll have a class that is almost the same as another
-class. We can duplicate the class with
-<code class="highlighter-rouge">@extend</code>
-and then add to
-it. This is sort of like inheritance.</p>
-
-</section>
-
-<section>
-
-  <h3 id="given-this-scss">Given this SCSS</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nc">.message</span> <span class="p">{</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="mh">#333</span><span class="p">;</span>
-  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
-  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#ccc</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.success</span> <span class="p">{</span>
-  <span class="k">@extend</span> <span class="nc">.message</span><span class="p">;</span>
-  <span class="nl">border-color</span><span class="p">:</span> <span class="no">darkgreen</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="no">palegreen</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.error</span> <span class="p">{</span>
-  <span class="k">@extend</span> <span class="nc">.message</span><span class="p">;</span>
-  <span class="nl">border-color</span><span class="p">:</span> <span class="no">darkred</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="no">lightcoral</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="you-get-this-css">You get this CSS:</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.message</span><span class="o">,</span> <span class="nc">.success</span><span class="o">,</span> <span class="nc">.error</span> <span class="p">{</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
-  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
-  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#ccc</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.success</span> <span class="p">{</span>
-  <span class="nl">border-color</span><span class="p">:</span> <span class="no">darkgreen</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="no">palegreen</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.error</span> <span class="p">{</span>
-  <span class="nl">border-color</span><span class="p">:</span> <span class="no">darkred</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="no">lightcoral</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="composition-or-inheritance">Composition or Inheritance</h3>
-
-  <p>Generally speaking, composition with <code class="highlighter-rouge">@include</code> is a better choice
-than inheritance with <code class="highlighter-rouge">@extend</code> but there are good cases for both.</p>
-
-  <p class="fragment">In the example above, the different types of messages make sense to
-inherit (<code class="highlighter-rouge">@extend</code>) from the <code class="highlighter-rouge">.message</code> class since they are of the
-same basic kind of thing.</p>
-
-  <p class="fragment">Whereas many different kinds of things might have a background
-gradient, where it makes more sense to compose with <code class="highlighter-rouge">@include</code>.</p>
-
-</section>
-
-<section>
-
-  <h3 id="rules-of-thumb">Rules of thumb:</h3>
-
-  <p class="fragment">use <code class="highlighter-rouge">@extend</code> when you want the same styles and the types are
-<strong>similar</strong></p>
-
-  <p class="fragment">use <code class="highlighter-rouge">@include</code> when you want the same styles but with
-<strong>different</strong> types</p>
-
-</section>
-
-<aside class="notes">
-
-  <p>Sass:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nc">.message</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="mh">#333</span>
-  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span>
-  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">15px</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#ccc</span>
-
-<span class="nc">.success</span>
-  <span class="k">@extend</span> <span class="nc">.message</span>
-  <span class="nl">border-color</span><span class="p">:</span> <span class="no">darkgreen</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="no">palegreen</span>
-
-<span class="nc">.error</span>
-  <span class="k">@extend</span> <span class="nc">.message</span>
-  <span class="nl">border-color</span><span class="p">:</span> <span class="no">darkred</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="no">lightcoral</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <h2 id="lets-develop-it">Let’s Develop It!</h2>
-
-<ul>
-  <li>
-    <p>Create new mixins using the following:</p>
-
-    <ul>
-      <li>Multiple arguments</li>
-      <li>Default arguments</li>
-      <li>Interpolation</li>
-    </ul>
-  </li>
-  <li>Use these in your <code class="highlighter-rouge">styles.scss</code> file</li>
-  <li>Use <code class="highlighter-rouge">@extend</code> to create new classes</li>
-</ul>
-
-</section>
-
-
-<section class="">
-  <h1 id="lets-take-a-break">Let’s Take a Break</h1>
-
-<iframe src="//giphy.com/embed/14fq3aX3v85VCM" width="800" height="341" frameborder="0" class="giphy-embed noprint" allowfullscreen=""></iframe>
-
-<div class="hide-gif noprint">
-  <p>Hide Gif</p>
-</div>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="css3-browser-prefixes">CSS3 Browser Prefixes</h2>
-
-  <p>There are a lot of newer features in CSS3 that require <strong>browser
-prefixes</strong>.
-These are well-suited to mixins
-so we don’t have to copy-paste a lot of duplicate code.</p>
-
-</section>
-
-<section>
-
-  <h3 id="browser-prefixes">Browser Prefixes</h3>
-
-  <ul>
-    <li>Chrome, Safari, Android Browser: <code class="highlighter-rouge">-webkit-</code></li>
-    <li>Firefox, Gecko: <code class="highlighter-rouge">-moz-</code></li>
-    <li>Opera: <code class="highlighter-rouge">-o-</code></li>
-    <li>Internet Explorer: <code class="highlighter-rouge">-ms-</code></li>
-  </ul>
-
-</section>
-
-<section>
-
-  <h3 id="browser-support">Browser Support</h3>
-
-  <p>Eventually support for newer styles becomes built-in to each browser
-and you no longer need the prefix.</p>
-
-  <p class="fragment">Check in at
-<a href="http://caniuse.com" target="_blank" title="Can I Use?">
-Can I Use?
-</a>
-website to see what’s required.</p>
-
-</section>
-
-<section>
-
-  <h3 id="autoprefixing">Autoprefixing</h3>
-
-  <p>Modern website development doesn’t bother with this. There are tools
-which will modify your css so it contains just the necessary browser
-prefixes.</p>
-
-  <p>See <a href="https://www.npmjs.com/package/autoprefixer" target="_blank" title="Autoprefixer at npmjs">autoprefixer</a> which
-can be used with webpack, grunt, and gulp.</p>
-
-</section>
-
-<section>
-
-  <p>Here’s an example showing a rotation transform, with the various
-browser prefixes.</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">rotate</span><span class="p">(</span><span class="nv">$degree</span><span class="o">,</span> <span class="nv">$position</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// always put prefixes *before* non-prefixed style
-</span>  <span class="na">-webkit-transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">);</span>
-  <span class="na">-moz-transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">);</span>
-  <span class="na">-ms-transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">);</span>
-  <span class="na">-o-transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">);</span>
-  <span class="nl">transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">);</span>
-  <span class="na">-webkit-transform-origin</span><span class="p">:</span> <span class="nv">$position</span><span class="p">;</span>
-  <span class="na">-moz-transform-origin</span><span class="p">:</span> <span class="nv">$position</span><span class="p">;</span>
-  <span class="na">-ms-transform-origin</span><span class="p">:</span> <span class="nv">$position</span><span class="p">;</span>
-  <span class="na">-o-transform-origin</span><span class="p">:</span> <span class="nv">$position</span><span class="p">;</span>
-  <span class="nl">transform-origin</span><span class="p">:</span> <span class="nv">$position</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>And then calling the rotation on a block item:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nc">.post</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">rotate</span><span class="p">(</span><span class="m">20</span><span class="o">,</span> <span class="nb">center</span><span class="p">);</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <p>Produces the following CSS:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.post</span> <span class="p">{</span>
-  <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">20deg</span><span class="p">);</span>
-  <span class="nl">-moz-transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">20deg</span><span class="p">);</span>
-  <span class="nl">-ms-transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">20deg</span><span class="p">);</span>
-  <span class="nl">-o-transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">20deg</span><span class="p">);</span>
-  <span class="nl">transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">20deg</span><span class="p">);</span>
-  <span class="nl">-webkit-transform-origin</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-  <span class="nl">-moz-transform-origin</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-  <span class="nl">-ms-transform-origin</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-  <span class="nl">-o-transform-origin</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-  <span class="nl">transform-origin</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <h3 id="sass">Sass:</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nf">=rotate</span><span class="p">(</span><span class="nv">$degree</span><span class="o">,</span> <span class="nv">$position</span><span class="p">)</span>
-  <span class="c1">// always put prefixes *before* non-prefixed style
-</span>  <span class="na">-webkit-transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">)</span>
-  <span class="na">-moz-transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">)</span>
-  <span class="na">-ms-transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">)</span>
-  <span class="na">-o-transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">)</span>
-  <span class="nl">transform</span><span class="p">:</span> <span class="nf">rotate</span><span class="p">(</span><span class="si">#{</span><span class="nv">$degree</span><span class="si">}</span><span class="n">deg</span><span class="p">)</span>
-
-  <span class="na">-webkit-transform-origin</span><span class="p">:</span> <span class="nv">$position</span>
-  <span class="na">-moz-transform-origin</span><span class="p">:</span> <span class="nv">$position</span>
-  <span class="na">-ms-transform-origin</span><span class="p">:</span> <span class="nv">$position</span>
-  <span class="na">-o-transform-origin</span><span class="p">:</span> <span class="nv">$position</span>
-  <span class="nl">transform-origin</span><span class="p">:</span> <span class="nv">$position</span>
-
-<span class="nc">.post</span>
-  <span class="nd">+rotate</span><span class="p">(</span><span class="m">20</span><span class="o">,</span> <span class="nb">center</span><span class="p">)</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="sprite-mixins">Sprite Mixins</h2>
-
-  <p class="fragment">Another great place to use mixins is with
-<a href="https://www.smashingmagazine.com/2012/04/css-sprites-revisited/" target="_blank" title="Smashing Magazine: CSS Sprites Revisited">CSS Sprites</a>
-pattern.</p>
-
-  <p class="fragment">CSS Sprites allow you to have many different images, icons,
-etc, without incurring a lot of extra downloads by putting them all in
-the same file.</p>
-
-</section>
-
-<section>
-
-  <h4 id="sprite-mixins-1">Sprite Mixins</h4>
-
-  <p>Example: YouTube’s sprite sheet:</p>
-
-  <p><img src="images/youtube_sprite.png" alt="" /></p>
-
-</section>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="lets-develop-it">Let’s Develop It</h2>
-
-  <p>Let’s have a look at sprites for the Class 2 Exercises:</p>
-
-  <p><img src="/html-320-stylin-with-sass/images/sprite.png" alt="" /></p>
-
-  <p>These icons are in square boxes of 32px per size.</p>
-
-</section>
-
-<section>
-
-  <h4 id="lets-develop-it-1">Let’s Develop It</h4>
-
-  <div class="left-align gowide">
-
-    <p>There are some implementation and design considerations:</p>
-
-    <ul class="fragment">
-      <li>Whether to <code class="highlighter-rouge">@extend</code> or combine classes</li>
-    </ul>
-
-    <ul class="fragment">
-      <li>Calculating the position of the sprite background image</li>
-    </ul>
-
-    <ul class="fragment">
-      <li>Allowing vision-impaired people to know what the sprite is for</li>
-    </ul>
-
-    <ul class="fragment">
-      <li>We can use variables and default arguments to keep the SCSS clean</li>
-    </ul>
-
-  </div>
-
-</section>
-
-<section>
-
-  <h4 id="lets-develop-it-2">Let’s Develop It</h4>
-
-  <div class="left-align gowide">
-
-    <p>Things we know:</p>
-
-    <ul class="fragment">
-      <li>The sprites are arrayed in a grid of 32 x 32 pixels</li>
-    </ul>
-
-    <ul class="fragment">
-      <li>We can pass in positioning x and y values and calculate how to
-position the sprite sheet</li>
-    </ul>
-
-    <ul class="fragment">
-      <li>There are some good practices for hiding text from the browser
-visually while not hiding it from a screen reader</li>
-    </ul>
-
-  </div>
-
-</section>
-
-<section>
-
-  <h4 id="lets-develop-it---mixins">Let’s Develop It - mixins</h4>
-
-  <div class="left-align gowide">
-
-    <p class="fragment">Create a set of mixins that easily let you choose and position the
-icon sprite sheet in <code class="highlighter-rouge">_tools.scss</code>.</p>
-
-    <p class="fragment">Make a sprite mixin that uses the sprite sheet as the background image
-in <code class="highlighter-rouge">_tools.scss</code>.</p>
-
-    <p class="fragment">Make a mixin that will visually hide the text in favour of the
-background image.</p>
-
-  </div>
-
-</section>
-
-<section>
-
-  <h4 id="lets-develop-it---icons">Let’s Develop It - icons</h4>
-
-  <div class="left-align gowide">
-
-    <p class="fragment">Create a new <code class="highlighter-rouge">_icons.scss</code> file in <code class="highlighter-rouge">stylesheets/scss/</code>. Use this for
-creating the icon classes.</p>
-
-    <p class="fragment">Make a base class that contains the primary features for the icons in <code class="highlighter-rouge">_icons.scss</code></p>
-
-    <p class="fragment">Make individual classes for each sprite that extend the base sprite class
-in <code class="highlighter-rouge">_icons.scss</code>.</p>
-
-    <p class="fragment">You’ll have to provide the coordinates for each individual sprite.</p>
-
-  </div>
-
-</section>
-
-<section>
-
-  <h4 id="lets-develop-it---html">Let’s Develop It - html</h4>
-
-  <div class="left-align gowide">
-
-    <p class="fragment">Add to the list of items in the footer to use each icon: <code class="highlighter-rouge">&lt;li&gt;&lt;i class="youtube"&gt;Youtube&lt;/i&gt;&lt;/li&gt;</code>.</p>
-
-  </div>
-
-</section>
-
-<aside class="notes">
-
-  <h2 id="visually-hidign-text-in-favour-of-a-background-image">visually hidign text in favour of a background image</h2>
-
-  <p>This is typically called “image replacement”, and lets you accessibly
-hide text when you want to use the background image.</p>
-
-  <p>As a straight class, it would be:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.image-replace</span> <span class="p">{</span>
-  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">100%</span><span class="p">:</span>
-  <span class="n">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
-  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <p>Turning it into a mixin is trivial:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">image-replace</span> <span class="p">{</span>
-  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">100%</span><span class="o">:</span>
-  <span class="n">white-space</span><span class="o">:</span> <span class="nb">nowrap</span><span class="p">;</span>
-  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <h2 id="sprite-positioning">sprite positioning</h2>
-
-  <p>Figuring out how to position the sprite sheet for each sprite is
-tricky and time consuming in regular CSS. But Sass gives us maths!</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">sprite-position</span><span class="p">(</span><span class="nv">$x</span><span class="o">:</span><span class="m">0</span><span class="o">,</span> <span class="nv">$y</span><span class="o">:</span><span class="m">0</span><span class="o">,</span> <span class="nv">$gridSize</span><span class="o">:</span> <span class="nv">$sprite-grid-size</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nv">$offsetX</span><span class="p">:</span>   <span class="nv">$x</span> <span class="o">*</span> <span class="nv">$gridSize</span> <span class="o">*</span> <span class="m">-1</span><span class="p">;</span>
-  <span class="nv">$offsetY</span><span class="p">:</span>   <span class="nv">$y</span> <span class="o">*</span> <span class="nv">$gridSize</span> <span class="o">*</span> <span class="m">-1</span><span class="p">;</span>
-  <span class="nl">background-position</span><span class="p">:</span> <span class="nv">$offsetX</span> <span class="nv">$offsetY</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <p>The offsets are negative because we start at (0,0) and move the sprite
-sheet to the left.</p>
-
-  <p>Also note the judicious use of a variable <code class="highlighter-rouge">$sprite-grid-size</code>.</p>
-
-  <h2 id="setting-up-the-sprite-sheet">setting up the sprite sheet</h2>
-
-  <p>This mixin brings in the background image with other necessary elements.</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">sprite-image</span><span class="p">(</span><span class="nv">$file</span><span class="o">:</span> <span class="nv">$sprite-file</span><span class="o">,</span> <span class="nv">$x</span><span class="o">:</span><span class="m">0</span><span class="o">,</span> <span class="nv">$y</span><span class="o">:</span><span class="m">0</span><span class="o">,</span> <span class="nv">$gridSize</span><span class="o">:</span> <span class="nv">$sprite-grid-size</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("</span><span class="si">#{</span><span class="nv">$sprite-sheet-path</span><span class="si">}</span><span class="sx">/</span><span class="si">#{</span><span class="nv">$file</span><span class="si">}</span><span class="sx">")</span><span class="p">;</span>
-  <span class="k">@include</span> <span class="nd">sprite-position</span><span class="p">(</span><span class="nv">$x</span><span class="o">,</span> <span class="nv">$y</span><span class="o">,</span> <span class="nv">$gridSize</span><span class="p">);</span>
-  <span class="k">@include</span> <span class="nd">image-replace</span><span class="p">;</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="nv">$gridSize</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="nv">$gridSize</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <p>Again, use of variables set in <code class="highlighter-rouge">_settings.scss</code> makes changing this
-stuff out easy.</p>
-
-  <h1 id="these-allow-easy-creation-of-icons">These allow easy creation of icons</h1>
-
-  <h2 id="creating-the-base-icon-class">creating the base icon class</h2>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nc">.icon</span> <span class="p">{</span>
-    <span class="k">@include</span> <span class="nd">sprite-image</span><span class="p">;</span>
-    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <h2 id="and-the-subclasses-extending-the-base-class">and the subclasses extending the base class</h2>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nc">.youtube</span> <span class="p">{</span>
-    <span class="k">@extend</span> <span class="nc">.icon</span><span class="p">;</span>
-    <span class="k">@include</span> <span class="nd">sprite-position</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nc">.twitter</span> <span class="p">{</span>
-    <span class="k">@extend</span> <span class="nc">.icon</span><span class="p">;</span>
-    <span class="k">@include</span> <span class="nd">sprite-position</span><span class="p">(</span><span class="m">1</span><span class="o">,</span><span class="m">0</span><span class="p">);</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <p>and so on.</p>
-
-  <h1 id="resulting-in-some-messy-css">resulting in some messy CSS</h1>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.icon</span><span class="o">,</span> <span class="nc">.youtube</span><span class="o">,</span> <span class="nc">.twitter</span><span class="o">,</span> <span class="nc">.rss</span><span class="o">,</span> <span class="nc">.flickr</span><span class="o">,</span> <span class="nc">.facebook</span><span class="o">,</span> <span class="nc">.print</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("../../images/icons/sprite.png")</span><span class="p">;</span>
-  <span class="nl">background-position</span><span class="p">:</span> <span class="m">0px</span> <span class="m">0px</span><span class="p">;</span>
-  <span class="nl">text-indent</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-  <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
-  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
-  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">32px</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="m">32px</span><span class="p">;</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nc">.print</span> <span class="p">{</span>
-  <span class="nl">background-position</span><span class="p">:</span> <span class="m">-160px</span> <span class="m">0px</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</aside>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="looping-in-sass">Looping in Sass</h2>
-
-  <p>Sass gives you the ability to run in loops to build up CSS classes</p>
-
-  <p>Sass provides three types of loops:</p>
-
-  <ul>
-    <li><code class="highlighter-rouge">@for</code></li>
-    <li><code class="highlighter-rouge">@each</code></li>
-    <li><code class="highlighter-rouge">@while</code></li>
-  </ul>
-
-</section>
-
-<section>
-
-  <h4 id="looping-in-sass---for">Looping in Sass - @for</h4>
-
-  <p>Much like JavaScript’s <code class="highlighter-rouge">for</code>, <code class="highlighter-rouge">@for</code> runs over a range:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span> <span class="p">{</span>
-  <span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h4 id="looping-in-sass---for-1">Looping in Sass - @for</h4>
-
-  <p>Yields up:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.item-1</span> <span class="p">{</span>
+<figure class="highlight">
+  <pre><code class="language-css" data-lang="css"><span class="nc">.item-1</span> <span class="p">{</span>
   <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="p">}</span>
+
 <span class="nc">.item-2</span> <span class="p">{</span>
   <span class="nl">width</span><span class="p">:</span> <span class="m">4em</span><span class="p">;</span> <span class="p">}</span>
+
 <span class="nc">.item-3</span> <span class="p">{</span>
   <span class="nl">width</span><span class="p">:</span> <span class="m">6em</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
+</figure>
 
-</section>
-
-<section>
-
-  <h4 id="looping-in-sass---each">Looping in Sass - @each</h4>
-
-  <p>More like a mapping function, <code class="highlighter-rouge">@each</code> lets you run through several
-values:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$animal</span> <span class="n">in</span> <span class="n">puma</span><span class="o">,</span> <span class="n">sea-slug</span><span class="o">,</span> <span class="n">egret</span> <span class="p">{</span>
-  <span class="nc">.</span><span class="si">#{</span><span class="nv">$animal</span><span class="si">}</span><span class="nc">-icon</span> <span class="p">{</span>
-    <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/</span><span class="si">#{</span><span class="nv">$animal</span><span class="si">}</span><span class="sx">.png')</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h4 id="looping-in-sass---each-1">Looping in Sass - @each</h4>
-
-  <p>Yields:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.puma-icon</span> <span class="p">{</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("/images/puma.png")</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.sea-slug-icon</span> <span class="p">{</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("/images/sea-slug.png")</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.egret-icon</span> <span class="p">{</span>
-  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("/images/egret.png")</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h4 id="looping-in-sass---while">Looping in Sass - @while</h4>
-
-  <p>The <code class="highlighter-rouge">@while</code> loops keeps running as long as it’s condition is true</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$i</span><span class="p">:</span> <span class="m">6</span><span class="p">;</span>
-<span class="k">@while</span> <span class="nv">$i</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="p">{</span>
-  <span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nv">$i</span><span class="p">:</span> <span class="nv">$i</span> <span class="o">-</span> <span class="m">2</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h4 id="looping-in-sass---while-1">Looping in Sass - @while</h4>
-
-  <p>Yields up:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.item-6</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">12em</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.item-4</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">8em</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.item-2</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">4em</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
-
-</section>
 
 </section>
 
 
 <section class="">
-  <section>
+  <h3 id="branches">Branches!</h3>
 
-  <h2 id="branching-in-sass">Branching in Sass</h2>
+<p><strong>Start with SCSS:</strong></p>
 
-  <p>Along with looping, Sass provides a way to branch based on the
-evaluation of an expression.</p>
-
-  <ul>
-    <li><code class="highlighter-rouge">@if</code></li>
-    <li><code class="highlighter-rouge">@else</code></li>
-    <li><code class="highlighter-rouge">@else if</code></li>
-  </ul>
-
-</section>
-
-<section>
-
-  <h4 id="branching-in-sass---scss">Branching in Sass - SCSS</h4>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$type</span><span class="p">:</span> <span class="n">monster</span><span class="p">;</span>
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="nv">$type</span><span class="p">:</span> <span class="n">monster</span><span class="p">;</span>
 <span class="nt">p</span> <span class="p">{</span>
   <span class="k">@if</span> <span class="nv">$type</span> <span class="o">==</span> <span class="n">ocean</span> <span class="p">{</span>
     <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
@@ -2500,22 +685,225 @@ evaluation of an expression.</p>
     <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
-  </figure>
+</figure>
 
-</section>
+<div class="notes">
 
-<section>
-
-  <h4 id="branching-in-sass---css">Branching in Sass - CSS</h4>
-
-  <p>Yields:</p>
+  <p><strong>or Sass:</strong></p>
 
   <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+    <pre><code class="language-sass" data-lang="sass"><span class="nv">$type</span><span class="p">:</span> <span class="n">monster</span>
+
+<span class="nt">p</span>
+  <span class="k">@if</span> <span class="nv">$type</span> <span class="o">==</span> <span class="n">ocean</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span>
+  <span class="k">@else</span> <span class="n">if</span> <span class="nv">$type</span> <span class="o">==</span> <span class="n">matador</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span>
+  <span class="k">@else</span> <span class="n">if</span> <span class="nv">$type</span> <span class="o">==</span> <span class="n">monster</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">green</span>
+  <span class="k">@else</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">black</span></code></pre>
+  </figure>
+
+</div>
+
+<p><strong>Get CSS!</strong></p>
+
+<figure class="highlight">
+  <pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
+</figure>
+
 
 </section>
+
+
+<section class="">
+  <h3 id="more-examples">More examples</h3>
+
+<ul>
+  <li><a href="http://codepen.io/cfarm/pen/jteAG" target="_blank">Cross-Browser CSS3 Gradients</a></li>
+  <li><a href="http://codepen.io/cfarm/pen/rkEIo" target="_blank">Cross-Browser Box-shadow (drop shadow) effects</a></li>
+  <li><a href="http://codepen.io/andrewboyd/pen/LmIxi" target="_blank">Inner Text Shadow effect</a></li>
+  <li><a href="http://oddbird.net/demos/susy-off-canvas/" target="_blank">Off-Canvas Responsive Layout</a></li>
+  <li><a href="http://codepen.io" target="_blank">Codepen.IO</a> has lots and lots of examples.</li>
+</ul>
+
+</section>
+
+
+<section class="">
+  <h3 id="lets-develop-it">Let’s Develop It!</h3>
+
+<p>Checkout the exercise 1 branch:</p>
+
+<figure class="highlight">
+  <pre><code class="language-bash" data-lang="bash"><span class="c"># Ctrl+C to stop the watcher</span>
+git add --all
+git commit -m <span class="k">done
+</span>git checkout -b ex.01 origin/ex.01
+npm install
+npm start <span class="c"># to restart the watcher</span></code></pre>
+</figure>
+
+<p> </p>
+
+<p class="fragment">Follow the exercise instructions in the file<br />
+<code class="highlighter-rouge">exercise-01-new-sass-folder.md</code></p>
+
+</section>
+
+
+<section class="">
+  <h3 id="telling-sass-where-to-find-files-and-where-to-put-them">Telling Sass where to find files and where to put them</h3>
+
+<p>Sass needs to know where to find the files it should compile, and also
+where to write the compiled files.</p>
+
+<p>There is no magic to this, and the little watch script is telling Sass
+exactly where to pick things up and where to put them down.</p>
+
+<p>[<a href="print.html/#telling-sass-where-to-find-files-and-where-to-put-them" target="_blank">see notes</a>]</p>
+
+<div class="notes">
+
+  <p>The concept of a <code class="highlighter-rouge">sass/</code> source folder and a <code class="highlighter-rouge">css/</code> destination folder
+is very common, but you may find other ways to do this. If you do,
+your tooling will need to reflect this.</p>
+
+  <p class="left-align">If you look in the <code class="highlighter-rouge">gulpfile.js</code> file that is being used by
+<code class="highlighter-rouge">npm start</code>, you can find the area where the Sass files are being
+compiled. Line 11 contains:</p>
+
+  <figure class="highlight">
+    <pre><code class="language-javascript" data-lang="javascript"><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'sass'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span></code></pre>
+  </figure>
+
+  <p class="left-align">which creates the task to compile Sass files. Lines 12 through 16
+specify where to look for such files.</p>
+
+  <figure class="highlight">
+    <pre><code class="language-javascript" data-lang="javascript">   <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span>
+       <span class="p">[</span>
+           <span class="s1">'sass/**/*.scss'</span><span class="p">,</span>
+           <span class="s1">'sass/**/*.sass'</span>
+       <span class="p">])</span></code></pre>
+  </figure>
+
+  <p class="left-align">Line 22 specifies where to
+write them.</p>
+
+  <figure class="highlight">
+    <pre><code class="language-javascript" data-lang="javascript">      <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="s1">'css'</span><span class="p">))</span></code></pre>
+  </figure>
+
+  <p>Since Sass is a pre-compiler, it needs to run before you open your
+files in the browser (and it will need to be run before you release
+your files to the public). This will <em>always</em> require some sort of
+manual or automated step. Using the watcher program here, which is
+called <a href="https://gulpjs.com" target="_blank">Gulp</a>, is one way people do this in an
+automated way. There are several other ways as well.</p>
+
+  <ul>
+    <li>command line task runners: Gulp, Grunt, Rake, Make, etc.</li>
+    <li>GUI task runners: Codekit, Proces, etc.</li>
+    <li>tools that include Sass support: Jekyll, Rails, Webkit</li>
+  </ul>
+
+  <p>This class is not concerned with such tooling, but it is an important
+part of using Sass.</p>
+
+  <p> </p>
+
+  <p>You can reuse this setup in other projects by copying the
+<code class="highlighter-rouge">package.json</code> and <code class="highlighter-rouge">gulpfile.js</code> files, and recreating the structure
+of the project.</p>
+
+</div>
+
+</section>
+
+
+<section class="">
+  <h3 id="imports-and-partials">Imports and Partials</h3>
+
+<p>Sass extends the <code class="highlighter-rouge">@import</code> function from CSS to create the concept of
+a <em>partial</em>.</p>
+
+<p class="fragment">A partial is a segment of Sass code in a file with a name that begins
+with an underscore (<code class="highlighter-rouge">_</code>). Such files are treated differently by Sass:</p>
+
+<ul class="fragment">
+  <li>if a file starts with an underscore, <em>do not</em> compile a separate
+<code class="highlighter-rouge">.css</code> file for it.</li>
+  <li>otherwise, compile a <code class="highlighter-rouge">.css</code> file</li>
+</ul>
+
+</section>
+
+
+<section class="">
+  <h3 id="for-example">for example:</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Source File Name</th>
+      <th>Destination File Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>styles.scss</td>
+      <td>styles.css</td>
+    </tr>
+    <tr>
+      <td>_grid.scss</td>
+      <td>——</td>
+    </tr>
+  </tbody>
+</table>
+
+</section>
+
+
+<section class="">
+  <h3 id="importing-a-partial">Importing a partial</h3>
+
+<p>When you import the partial, you leave off the leading underscore.</p>
+
+<p>Sass knows how to find the right file.</p>
+
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">"grid"</span><span class="p">;</span></code></pre>
+</figure>
+
+
+</section>
+
+
+<section class="">
+  <h3 id="lets-develop-it">Let’s Develop It!</h3>
+
+<p>Stop the watcher (<em>Ctrl-C</em>)</p>
+
+<p>Save your changes and checkout exercise 2:</p>
+
+<figure class="highlight">
+  <pre><code class="language-bash" data-lang="bash">git add --all
+git commit -m <span class="k">done
+</span>git checkout -b ex.02 origin/ex.02</code></pre>
+</figure>
+
+<p>Restart the watcher:</p>
+
+<figure class="highlight">
+  <pre><code class="language-bash" data-lang="bash">npm start</code></pre>
+</figure>
+
+<p>Follow the instructions in the file:</p>
+
+<p><code class="highlighter-rouge">exercise-02-single-css-file.md</code></p>
 
 </section>
 
@@ -2523,10 +911,93 @@ evaluation of an expression.</p>
 <section class="">
   <section>
 
-  <h2 id="lets-develop-it">Let’s Develop It!</h2>
+  <h3 id="structuring-your-sass">Structuring Your Sass</h3>
+
+</section>
+
+<section>
+
+  <p><strong>Issue:</strong></p>
+
+  <p>How to organize the CSS for <br />your website in a way that is:</p>
+
+  <ol>
+<li class="fragment">Correct</li>
+<li class="fragment">Consistent</li>
+<li class="fragment">Maintainable</li>
+<li class="fragment">Performant</li>
+</ol>
+
+</section>
+
+<section>
+
+  <p><strong>Problem:</strong></p>
+
+  <p>How to ensure proper specificity <br />
+when creating the CSS.</p>
+
+  <p><img src="/images/harry-roberts-quote-specificity.png" alt="" /></p>
+
+  <p><small>
+<a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss" target="_blank">Managing CSS Projects with ITCSS</a> by Harry Roberts, CSS Wizardry
+</small></p>
+
+</section>
+
+<section>
+
+  <h3 id="itcss">ITCSS</h3>
+
+  <p><strong>“Inverted Triangle CSS”</strong></p>
+
+  <p><img src="/images/ITCSS.png" alt="" /></p>
+
+</section>
+
+<section>
+
+  <h4 id="generic-to-explicit">Generic to Explicit</h4>
+
+  <p><img src="/images/ITCSS-generic-to-explicit.png" alt="" /></p>
+
+</section>
+
+<section>
+
+  <h4 id="far-reaching-to-localized">Far-reaching to Localized</h4>
+
+  <p><img src="/images/ITCSS-farreaching-to-localized.png" alt="" /></p>
+
+</section>
+
+<section>
+
+  <h4 id="low-specificity-to-high-specificity">Low Specificity to High Specificity</h4>
+
+  <p><img src="/images/ITCSS-low-to-high-specificity.png" alt="" /></p>
+
+</section>
+
+<section>
+
+  <h4 id="levels">Levels</h4>
+
+  <p><img src="/images/ITCSS-levels.png" alt="" /></p>
+
+</section>
+
+<section>
 
   <ul>
-    <li>Using loops and branches, rewrite more of the CSS into structured SCSS</li>
+    <li><strong>Settings:</strong> global variables, configuration switches, font loading</li>
+    <li><strong>Tools:</strong> default mixins and functions</li>
+    <li><strong>Generic:</strong> ground-zero styles such as normalize, resets,
+box-sizing</li>
+    <li><strong>Base:</strong> unclassed HTML elements</li>
+    <li><strong>Objects:</strong> cosmetic-free design patters</li>
+    <li><strong>Components:</strong> Designed components, chunks of UI</li>
+    <li><strong>Overrides:</strong> helpers and overrides (ideally empty)</li>
   </ul>
 
 </section>
@@ -2535,739 +1006,156 @@ evaluation of an expression.</p>
 
 
 <section class="">
-  <h1 id="lets-take-a-break">Let’s Take a Break</h1>
+  <h3 id="lets-develop-it">Let’s Develop It!</h3>
 
-<iframe src="//giphy.com/embed/7qEdwIqFZHrEc" width="480" height="336" frameborder="0" class="giphy-embed noprint" allowfullscreen=""></iframe>
-
-<div class="hide-gif noprint">
-  <p>Hide Gif</p>
-</div>
-
-</section>
-
-
-<section class="">
-  <section>
-
-  <h2 id="organizing-sass">Organizing Sass</h2>
-
-  <h4 id="itcss---inverted-triangle-css">ITCSS - Inverted Triangle CSS</h4>
-
-  <p>Low Specificity and High Genericity</p>
-
-  <p><em>down to</em></p>
-
-  <p>High Specificity and Low Genericity</p>
-
-</section>
-
-<section>
-
-  <h4 id="organizing-sass---itcss">Organizing Sass - ITCSS</h4>
-
-  <ul>
-    <li>Settings</li>
-    <li>Tools</li>
-    <li>Generic</li>
-    <li>Base</li>
-    <li>Objects</li>
-    <li>Components</li>
-    <li>Overrides</li>
-  </ul>
-
-</section>
-
-<section>
-
-  <h4 id="organizing-sass---settings">Organizing Sass - Settings</h4>
-
-  <p>This is where your variables go.</p>
-
-  <p>A good place to load web fonts as well.</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$body-bg</span><span class="p">:</span> <span class="no">lightgreen</span><span class="p">;</span>
-<span class="nv">$accent-bg</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$body-bg</span><span class="o">,</span> <span class="m">40%</span><span class="p">);</span>
-
-<span class="k">@import</span> <span class="s1">'https://fonts.googleapis.com/css?family=Open+Sans'</span><span class="p">;</span>
-<span class="nv">$font-stack</span><span class="p">:</span> <span class="s1">'Open Sans'</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h4 id="organizing-sass---tools">Organizing Sass - Tools</h4>
-
-  <p>The home of mixins and functions.</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">clearfix</span> <span class="p">{</span>
-  <span class="k">&amp;</span><span class="nd">:before</span><span class="o">,</span> <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
-    <span class="nl">content</span><span class="p">:</span> <span class="s2">" "</span><span class="p">;</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">table</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
-    <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h4 id="organizing-sass---generic">Organizing Sass - Generic</h4>
-
-  <p>Style attributes to apply to everything on the page.</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="o">*</span> <span class="p">{</span>
-  <span class="na">-webkit-box-sizing</span><span class="p">:</span> <span class="n">box-content</span><span class="p">;</span>
-  <span class="na">-moz-box-sizing</span><span class="p">:</span> <span class="n">box-content</span><span class="p">;</span>
-  <span class="na">-ms-box-sizing</span><span class="p">:</span> <span class="n">box-content</span><span class="p">;</span>
-  <span class="na">-o-box-sizing</span><span class="p">:</span> <span class="n">box-content</span><span class="p">;</span>
-  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">box-content</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h4 id="organizing-sass---base">Organizing Sass - Base</h4>
-
-  <p>Bare element style attributes.</p>
-
-  <p>This is where you do your resets and element defaults.</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">a</span> <span class="p">{</span>
-  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
-  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
-    <span class="k">@include</span> <span class="nd">glow</span><span class="p">(</span><span class="nv">$link-hover-color</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h4 id="organizing-sass---objects">Organizing Sass - Objects</h4>
-
-  <p class="yellow">From this point onward, everything is <em>class</em> based.</p>
-
-  <p>This is where you address major page objects, such as the page header,
-main content, and so on.</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nc">.page-header</span> <span class="p">{</span>
-  <span class="nt">h1</span> <span class="p">{</span>
-    <span class="nl">font-family</span><span class="p">:</span> <span class="nv">$header-font-stack</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h4 id="organizing-sass---components">Organizing Sass - Components</h4>
-
-  <p>UI components: menu items, icons, etc.</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nc">.jump</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">iconFont</span><span class="p">;</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$jumpColor</span><span class="p">;</span>
-  <span class="k">&amp;</span><span class="nc">.up</span> <span class="p">{</span> <span class="nl">left</span><span class="p">:</span> <span class="nv">$jumpOffset</span><span class="p">;</span> <span class="p">}</span>
-  <span class="k">&amp;</span><span class="nc">.down</span> <span class="p">{</span> <span class="nl">right</span><span class="p">:</span> <span class="nv">$jumpOffset</span><span class="p">;</span> <span class="p">}</span>
-  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nv">$jumpHoverColor</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <p class="fragment">Generally things that might appear <br />in several places on a page.</p>
-
-</section>
-
-<section>
-
-  <h4 id="organizing-sass---overrides">Organizing Sass - Overrides</h4>
-
-  <p>These should be kept to a bare minimum.</p>
-
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="c1">// i demand this be in red!
-</span><span class="nt">header</span> <span class="nt">nav</span> <span class="nt">ul</span> <span class="nt">li</span><span class="nd">:last-child</span> <span class="nt">a</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">red</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-  <p class="fragment">These things are known as <br /><em>“The Hall of Shame”</em></p>
-
-  <p class="fragment yellow">Consider using a targetted class <br />in the Components section instead.</p>
-
-</section>
+<ol>
+  <li>Stop the watcher: <code class="highlighter-rouge">Ctrl+C</code></li>
+  <li>Save your changes for exercise 2: <br /> <code class="highlighter-rouge">git add --all &amp;&amp; git
+commit -m done</code></li>
+  <li>Pull down exercise 3: <br /><code class="highlighter-rouge">git checkout -b ex.03 origin/ex.03</code></li>
+  <li>Follow instructions in <br /><code class="highlighter-rouge">exercise-03-itcss-structure.md</code></li>
+  <li>Restart the watcher: <br /><code class="highlighter-rouge">npm start</code></li>
+</ol>
 
 </section>
 
 
 <section class="">
-  <section>
+  <h3 id="lets-develop-it">Let’s Develop It!</h3>
 
-  <h2 id="lets-develop-it">Let’s Develop It!</h2>
+<p>We’ll be doing a lot of refactoring over the next few develop it
+sections.</p>
 
-  <div class="left-align gowide">
+<p>Follow the same basic principles:</p>
 
-    <ul>
-      <li>This is the last practice time of the day.</li>
-      <li>Take this time to begin to restructure your Sass following the
-guidelines of the Inverted Triangle model.</li>
-      <li>Try out as many other features of Sass as you’d like.</li>
-      <li>Don’t forget to ask for help if you’re stuck.</li>
-      <li>Solutions to the exercises can be found back at the <a href="https://github.com/tamouse/html-320-stylin-with-sass-project-files/" target="_blank" title="Project files for Stylin With Sass class">
-project files
-</a>
- repository in the <a href="https://github.com/tamouse/html-320-stylin-with-sass-project-files/tree/solutions" target="_blank" title="Solutions Branch for Project files">
-solutions branch
-</a>
-.</li>
-    </ul>
-
-  </div>
-
-</section>
+<ul>
+  <li>stop the watcher</li>
+  <li>save your past work</li>
+  <li>checkout the next exercise</li>
+  <li>start the watcher</li>
+  <li>perform the work in exercise instructions file</li>
+</ul>
 
 </section>
 
 
 <section class="">
-  <h2 id="thanks">Thanks!</h2>
-
-<p>Thank you all for coming!</p>
-
-<iframe src="//giphy.com/embed/4Xp5iQo8Iqnfi" width="480" height="360" frameborder="0" class="giphy-embed noprint" allowfullscreen=""></iframe>
-
-<div class="hide-gif">
-  <p>Hide Gif</p>
-</div>
-
-<p class="notes"><a href="http://giphy.com/gifs/thank-4Xp5iQo8Iqnfi">Thank You via GIPHY</a></p>
-
-<p>Please fill out the survey for a prize:</p>
-
-<p><a href="http://tinyurl.com/gdimpls" target="_blank" title="GDI Minneapolis Class Evaluation Survey">
-  GDI Minneapolis Class Evaluation Survey
-</a></p>
-
-
-</section>
-
-
-<section class="">
-  <h1 id="mdash-fin-mdash">— <em>fin</em> —</h1>
-
-</section>
-
-
-<section class="">
-  <h2 id="appendices">Appendices</h2>
-
-<p>Following is some extra material that we aren’t covering directly in
-the course.</p>
-
-</section>
-
-
-<section class="">
-  <h2 id="helpful-links">helpful links</h2>
+  <h3 id="extracting-elements">Extracting Elements</h3>
 
 <div class="left-align">
+
   <ul>
-    <li>Sass home page: <a href="http://sass-lang.com" target="_blank" title="Sass Language Home Page">
-  http://sass-lang.com
-</a>
-</li>
-    <li>Documentation: <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank" title="Sass Documentation">
-  http://sass-lang.com/documentation/file.SASS_REFERENCE.html
-</a>
-</li>
+    <li>Styling Bare HTML Elements, after resets</li>
   </ul>
+
+  <p class="notes">In a given, existing project, or in a brand new project, you want to
+pull all the bare HTML elements into the <code class="highlighter-rouge">_elements.scss</code> file. This
+builds on the resets and normalizing that is done in the General
+section.</p>
+
+  <ul>
+    <li>No classes used here, just element selectors</li>
+  </ul>
+
+  <p class="notes">You don’t specify any classes here, these are what is applied to all
+bare elements.</p>
+
+  <ul>
+    <li>Can break out into further partials if desired</li>
+  </ul>
+
+  <p class="notes">It might be helpful to lump certain elements together in separate
+partial files, for example: <code class="highlighter-rouge">_headings.scss</code> can hold all the <code class="highlighter-rouge">h1</code>,
+<code class="highlighter-rouge">h2</code>, etc, element tag stylines. This will be true as we go futher
+along as well.</p>
+
 </div>
 
 </section>
 
 
 <section class="">
-  <section>
+  <h3 id="lets-develop-it">Let’s Develop It</h3>
 
-  <h2 id="modern-website-development">Modern Website Development</h2>
-
-  <p>Modern website development uses many tools in order to make the
-development tasks easier, and to handle the repetitious or
-complicated tasks automatically.</p>
-
-  <p class="fragment">This leaves the develper free to focus on the content, and not on
-the more easily automated tasks the computer can do for us.</p>
-
-  <p class="fragment">Many different tools exist to help build your web
-site, getting familiar with them will be helpful.</p>
-
-</section>
+<p><strong>Exercise 4:</strong> Extract Elements</p>
 
 </section>
 
 
 <section class="">
-  <section class="left-align">
+  <h3 id="lets-develop-it">Let’s Develop It</h3>
 
-  <h2>CodeKit</h2>
-
-  <ul>
-    <li>
-      For Mac users who want to avoid the command line,
-      <a href="https://incident57.com/codekit/"
-   target="_blank"
-   title="Download CodeKit for Mac"
-   >
-  Codekit
-</a>
-
-      is highly recommended.
-    </li>
-
-    <li>
-      It can be used to compile everything you'd need for a static web
-      site or a JavaScript-driven single page app and more.
-    </li>
-
-    <li>
-      It is not, however, free, like many of the other task runners /
-      builders.
-    </li>
-
-    <li>
-      For what it does, it's relatively inexepensive.
-    </li>
-  </ul>
-
-  <h3 class="vertical-space">Download <a href="https://incident57.com/codekit/"
-   target="_blank"
-   title="Download CodeKit for Mac"
-   >
-  Codekit
-</a>
- for Max OSX.</h3>
-
-</section>
+<p><strong>Exercise 5:</strong> Finding Objects and Components</p>
 
 </section>
 
 
 <section class="">
-  <section>
+  <h3 id="lets-develop-it">Let’s Develop It</h3>
 
-  <h2>Compass.app</h2>
-
-  <ul>
-    <li>
-      For Windows and Linux, look at
-      <a href="http://compass.kkbox.com/"
-   target="_blank"
-   title="Compass.app is a menubar only app for Sass and Compass. It helps designers compile stylesheets easily without resorting to command line interface."
-   >
-  Compass.app
-</a>
-
-      instead.
-    </li>
-    <li>
-      <em>
-	"Compass.app is a menubar only app for Sass and Compass. It
-	helps designers compile stylesheets easily without resorting
-	to command line interface."
-      </em>
-    </li>
-  </ul>
-
-</section>
+<p><strong>Exercise 6:</strong> Settings and Tools</p>
 
 </section>
 
 
 <section class="">
-  <section class="left-align">
+  <h3 id="lets-develop-it">Let’s Develop It</h3>
 
-  <h2>Task Runners</h2>
-
-  <h3>Some task runners:</h3>
-
-  <ul>
-    <li>Make</li>
-    <li>Rake</li>
-    <li>Grunt</li>
-    <li>Gulp</li>
-    <li>Webpack</li>
-    <li>npm scripts</li>
-  </ul>
-
-</section>
+<p><strong>Exercise 7:</strong> Nesting and Refactoring</p>
 
 </section>
 
 
 <section class="">
-  <section>
+  <h3 id="lets-develop-it">Let’s Develop It</h3>
 
-  <h2 id="rake">Rake</h2>
-
-  <p><a href="http://docs.seattlerb.org/rake/" target="_blank" title="Ruby Rake">
-  Ruby Rake
-</a></p>
-
-  <p>Rake is a Make-like program implemented in Ruby. Tasks and dependencies are specified in standard Ruby syntax.</p>
-
-  <h4 id="example">Example</h4>
-
-  <figure class="highlight">
-    <pre><code class="language-ruby" data-lang="ruby"><span class="n">desc</span> <span class="s2">"Build Website"</span>
-<span class="n">task</span> <span class="ss">:build</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
-  <span class="n">sh</span> <span class="s2">"bundle exec jekyll build --config=_config.yml,_publish.yml"</span>
-<span class="k">end</span></code></pre>
-  </figure>
-
-  <p>Then to execute from the command line:</p>
-
-  <figure class="highlight">
-    <pre><code class="language-bash" data-lang="bash">rake build</code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <p>Rake has the following features:</p>
-
-  <ul>
-    <li>
-      <p>Rakefiles (rake’s version of Makefiles) are completely defined in standard Ruby syntax. No XML files to edit. No quirky Makefile syntax to worry about (is that a tab or a space?)</p>
-    </li>
-    <li>
-      <p>Users can specify tasks with prerequisites.</p>
-    </li>
-    <li>
-      <p>Rake supports rule patterns to synthesize implicit tasks.</p>
-    </li>
-    <li>
-      <p>Flexible FileLists that act like arrays but know about manipulating file names and paths.</p>
-    </li>
-    <li>
-      <p>A library of prepackaged tasks to make building rakefiles easier. For example, tasks for building tarballs and publishing to FTP or SSH sites. (Formerly tasks for building RDoc and Gems were included in rake but they’re now available in RDoc and RubyGems respectively.)</p>
-    </li>
-    <li>
-      <p>Supports parallel execution of tasks.</p>
-    </li>
-  </ul>
-
-</aside>
+<p><strong>Exercise 8:</strong> Theming</p>
 
 </section>
 
 
 <section class="">
-  <section>
+  <h3 id="lets-develop-it">Let’s Develop It</h3>
 
-  <h2 id="gulp">Gulp</h2>
-
-  <p><a href="https://gulpjs.com" target="_blank" title="Gulp.JS">
-  Gulp.JS
-</a></p>
-
-  <p>Gulp is a JavaScript-based automation tool that streamlines your
-workflow.</p>
-
-  <p>Tasks are coded in a <code class="highlighter-rouge">gulpfile.js</code> and generally consist of pipelines
-defining the workflow.</p>
-
-</section>
-
-<section>
-
-  <h4 id="sample-gulpfile">Sample Gulpfile</h4>
-
-  <figure class="highlight">
-    <pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">gulp</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">help</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-task-listing'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">cp</span>          <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'child_process'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">minifyCss</span>   <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-minify-css'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">notify</span>      <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"gulp-notify"</span><span class="p">)</span><span class="err"> </span>
-<span class="kd">var</span> <span class="nx">sass</span>        <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-ruby-sass'</span><span class="p">)</span><span class="err"> </span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">bower</span>       <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-bower'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">replace</span>     <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-replace'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">browserSync</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'browser-sync'</span><span class="p">);</span>
-
-<span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">sassPath</span><span class="p">:</span> <span class="s2">"./_sass"</span><span class="p">,</span>
-    <span class="na">bowerDir</span><span class="p">:</span> <span class="s2">"./bower_components"</span><span class="p">,</span>
-    <span class="na">assetDir</span><span class="p">:</span> <span class="s2">"./assets"</span><span class="p">,</span>
-    <span class="na">outputDir</span><span class="p">:</span> <span class="s2">"./_site"</span><span class="p">,</span>
-    <span class="na">distDir</span><span class="p">:</span> <span class="s2">"./_dist"</span>
-<span class="p">}</span>
-
-<span class="kd">var</span> <span class="nx">messages</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">jekyllBuild</span><span class="p">:</span> <span class="s1">'&lt;span style="color: grey"&gt;Running:&lt;/span&gt; $ jekyll build'</span>
-<span class="p">};</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'help'</span><span class="p">,</span> <span class="nx">help</span><span class="p">);</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'bower'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">bower</span><span class="p">()</span>
-         <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">bowerDir</span><span class="p">))</span>
-<span class="p">});</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'jekyll-build-dist'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'css'</span><span class="p">,</span><span class="s1">'icons'</span><span class="p">,</span><span class="s1">'bower'</span><span class="p">],</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">cp</span><span class="p">.</span><span class="nx">spawn</span><span class="p">(</span><span class="s1">'bundle'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'exec'</span><span class="p">,</span> <span class="s1">'jekyll'</span><span class="p">,</span> <span class="s1">'build'</span><span class="p">,</span> <span class="s1">'--config'</span><span class="p">,</span> <span class="s1">'_config.yml,_baseurl.yml'</span><span class="p">,</span> <span class="s1">'--destination'</span><span class="p">,</span> <span class="nx">config</span><span class="p">.</span><span class="nx">distDir</span><span class="p">],</span> <span class="p">{</span><span class="na">stdio</span><span class="p">:</span> <span class="s1">'inherit'</span><span class="p">});</span>
-<span class="p">});</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'jekyll-build'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'css'</span><span class="p">,</span><span class="s1">'icons'</span><span class="p">,</span><span class="s1">'bower'</span><span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">browserSync</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="nx">messages</span><span class="p">.</span><span class="nx">jekyllBuild</span><span class="p">);</span>
-  <span class="k">return</span> <span class="nx">cp</span><span class="p">.</span><span class="nx">spawn</span><span class="p">(</span><span class="s1">'bundle'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'exec'</span><span class="p">,</span> <span class="s1">'jekyll'</span><span class="p">,</span> <span class="s1">'build'</span><span class="p">,</span> <span class="s1">'--incremental'</span><span class="p">,</span> <span class="s1">'--drafts'</span><span class="p">],</span> <span class="p">{</span><span class="na">stdio</span><span class="p">:</span> <span class="s1">'inherit'</span><span class="p">})</span>
-    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'close'</span><span class="p">,</span> <span class="nx">done</span><span class="p">);</span>
-<span class="p">});</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'jekyll-rebuild'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'jekyll-build'</span><span class="p">],</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">browserSync</span><span class="p">.</span><span class="nx">reload</span><span class="p">();</span>
-<span class="p">});</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'icons'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span>
-    <span class="nx">config</span><span class="p">.</span><span class="nx">bowerDir</span> <span class="o">+</span> <span class="s2">"/fontawesome/fonts/**.*"</span><span class="p">)</span>
-         <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">assetDir</span> <span class="o">+</span> <span class="s2">"/fonts"</span><span class="p">))</span>
-         <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">outputDir</span> <span class="o">+</span> <span class="s2">"/assets/fonts"</span><span class="p">));</span>
-<span class="p">});</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'css'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">sass</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">sassPath</span> <span class="o">+</span> <span class="s2">"/main.scss"</span><span class="p">,</span> <span class="p">{</span>
-    <span class="na">style</span><span class="p">:</span> <span class="s2">"compressed"</span><span class="p">,</span>
-    <span class="na">loadPath</span><span class="p">:</span> <span class="p">[</span>
-      <span class="nx">config</span><span class="p">.</span><span class="nx">sassPath</span><span class="p">,</span>
-      <span class="nx">config</span><span class="p">.</span><span class="nx">bowerDir</span> <span class="o">+</span> <span class="s2">"/normalize.scss/"</span><span class="p">,</span>
-      <span class="nx">config</span><span class="p">.</span><span class="nx">bowerDir</span> <span class="o">+</span> <span class="s2">"/fontawesome/scss"</span>
-    <span class="p">],</span>
-    <span class="na">compass</span><span class="p">:</span> <span class="kc">true</span>
-  <span class="p">})</span>
-         <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">minifyCss</span><span class="p">())</span>
-         <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">assetDir</span> <span class="o">+</span> <span class="s2">"/css"</span><span class="p">))</span>
-         <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">outputDir</span> <span class="o">+</span> <span class="s2">"/assets/css"</span><span class="p">))</span>
-<span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">browserSync</span><span class="p">.</span><span class="nx">stream</span><span class="p">());</span>
-
-<span class="p">});</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'build'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'bower'</span><span class="p">,</span> <span class="s1">'icons'</span><span class="p">,</span> <span class="s1">'css'</span> <span class="p">,</span><span class="s1">'jekyll-build'</span><span class="p">]);</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'serve'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'build'</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">browserSync</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
-    <span class="na">server</span><span class="p">:</span> <span class="p">{</span>
-      <span class="na">baseDir</span><span class="p">:</span> <span class="s2">"./_site"</span>
-    <span class="p">}</span>
-  <span class="p">});</span>
-
-  <span class="c1">// Start a watch for rebuilds</span>
-  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">([</span><span class="s1">'_sass/*.scss'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'css'</span><span class="p">])</span>
-  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">([</span>
-    <span class="s1">'_config.yml'</span><span class="p">,</span>
-    <span class="s1">'_drafts/**/*'</span><span class="p">,</span>
-    <span class="s1">'_posts/**/*'</span><span class="p">,</span>
-    <span class="s1">'pages/**/*'</span><span class="p">,</span>
-    <span class="s1">'index.*'</span>
-  <span class="p">],</span> <span class="p">[</span><span class="s1">'jekyll-rebuild'</span><span class="p">]);</span>
-<span class="p">});</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'dist'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'bower'</span><span class="p">,</span> <span class="s1">'icons'</span><span class="p">,</span> <span class="s1">'css'</span><span class="p">,</span> <span class="s1">'jekyll-build-dist'</span><span class="p">]);</span>
-
-<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'default'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'serve'</span><span class="p">]);</span></code></pre>
-  </figure>
-
-</section>
-
-<aside class="notes">
-
-  <h3 id="easy-to-use">Easy to use</h3>
-
-  <p>By preferring code over configuration, gulp keeps things simple and makes complex tasks manageable.</p>
-
-  <h3 id="efficient">Efficient</h3>
-
-  <p>Using the power of node streams, gulp gives you fast builds that don’t write intermediary files to disk.</p>
-
-  <h3 id="high-quality">High Quality</h3>
-
-  <p>By enforcing strict plugin guidelines, we ensure that plugins stay simple and work as expected.</p>
-
-  <h3 id="easy-to-learn">Easy to Learn</h3>
-
-  <p>Using node best practices and maintaining a minimal API surface, your build works exactly as you would imagine.</p>
-
-  <h3 id="lots-of-plugins">Lots of Plugins</h3>
-
-</aside>
+<p><strong>Exercise 9:</strong> Wrapping Up</p>
 
 </section>
 
 
 <section class="">
-  <section>
+  <h3 id="further-reading">Further Reading</h3>
 
-  <h2 id="webpack">Webpack</h2>
-
-  <p><a href="https://webpack.github.io" target="_blank" title="WebPack.JS">
-  Webpack
-</a>
- is the rising star in modern
-website development and can manage many dialects of JavaScript, HTML,
-Haml, CSS, Sass, SCSS, images, and just about anything else because
-all the work is managed by <strong>plugins</strong>.</p>
-
-  <p>However, webpack is also quite complex to configure, and for starting
-out it might be better to use one of the others, or use a starter kit.</p>
-
-</section>
-
-<section>
-
-  <h3 id="sample-webpackconfigjs-file">Sample webpack.config.js file</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'webpack'</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'html-webpack-plugin'</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">autoprefixer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'autoprefixer'</span><span class="p">);</span>
-
-<span class="kr">const</span> <span class="nx">Config</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">title</span><span class="p">:</span> <span class="s2">"My Cool App"</span>
-<span class="p">}</span>
-
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">entry</span><span class="p">:</span> <span class="s2">"./app/app.js"</span><span class="p">,</span>
-  <span class="na">output</span><span class="p">:</span> <span class="p">{</span><span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">"dist"</span><span class="p">),</span><span class="na">filename</span><span class="p">:</span> <span class="s2">"bundle.js"</span><span class="p">},</span>
-  <span class="na">devTool</span><span class="p">:</span> <span class="s2">"#inline-source-map"</span><span class="p">,</span>
-  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">loaders</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span><span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">sass$/</span><span class="p">,</span> <span class="na">loaders</span><span class="p">:</span> <span class="p">[</span><span class="s2">"style"</span><span class="p">,</span> <span class="s2">"css"</span><span class="p">,</span> <span class="s2">"postcss"</span><span class="p">,</span> <span class="s2">"sass"</span><span class="p">]},</span>
-      <span class="p">{</span><span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">ejs$/</span><span class="p">,</span> <span class="na">loader</span><span class="p">:</span> <span class="s2">"ejs-loader"</span><span class="p">},</span>
-      <span class="p">{</span><span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">jsx</span><span class="se">?</span><span class="sr">$/</span><span class="p">,</span> <span class="na">exclude</span><span class="p">:</span> <span class="sr">/</span><span class="se">(</span><span class="sr">node_modules|bower_components</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span> <span class="na">loader</span><span class="p">:</span> <span class="s1">'babel'</span><span class="p">,</span> <span class="na">query</span><span class="p">:</span> <span class="p">{</span><span class="na">presets</span><span class="p">:</span> <span class="p">[</span><span class="s1">'es2015'</span><span class="p">]}},</span>
-      <span class="p">{</span><span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">woff</span><span class="se">(</span><span class="sr">2</span><span class="se">)?(\?</span><span class="sr">v=</span><span class="se">[</span><span class="sr">0-9</span><span class="se">]\.[</span><span class="sr">0-9</span><span class="se">]\.[</span><span class="sr">0-9</span><span class="se">])?</span><span class="sr">$/</span><span class="p">,</span> <span class="na">loader</span><span class="p">:</span> <span class="s2">"url-loader?limit=10000"</span><span class="p">},</span>
-      <span class="p">{</span><span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">ttf|eot|svg</span><span class="se">)(\?</span><span class="sr">v=</span><span class="se">[</span><span class="sr">0-9</span><span class="se">]\.[</span><span class="sr">0-9</span><span class="se">]\.[</span><span class="sr">0-9</span><span class="se">])?</span><span class="sr">$/</span><span class="p">,</span> <span class="na">loader</span><span class="p">:</span> <span class="s2">"file-loader"</span><span class="p">},</span>
-      <span class="p">{</span><span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">png$/</span><span class="p">,</span> <span class="na">loader</span><span class="p">:</span> <span class="s2">"url-loader?limit=100000&amp;mimetype=image/png&amp;name=[path][name].[hash].[ext]"</span><span class="p">},</span>
-      <span class="p">{</span><span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">jpg$/</span><span class="p">,</span> <span class="na">loader</span><span class="p">:</span> <span class="s2">"file-loader?name=[path][name].[hash].[ext]"</span><span class="p">},</span>
-    <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
-    <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="nx">Config</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span> <span class="na">template</span><span class="p">:</span> <span class="s2">"index.ejs"</span><span class="p">})</span>
-  <span class="p">],</span>
-  <span class="na">postcss</span><span class="p">:</span> <span class="p">[</span>
-    <span class="nx">autoprefixer</span><span class="p">({</span><span class="na">browsers</span><span class="p">:</span> <span class="p">[</span><span class="s1">'last 2 versions'</span><span class="p">]})</span>
-  <span class="p">]</span>
-<span class="p">}</span></code></pre>
-  </figure>
-
-</section>
+<ul>
+  <li><a href="http://sass-lang.org" target="_blank">Sass-Lang Website</a></li>
+  <li><a href="http://sass-lang.com/guide" target="_blank">Sass Basics</a></li>
+  <li><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank">Sass Documentation</a></li>
+</ul>
 
 </section>
 
 
 <section class="">
-  <section>
+  <h3 id="the-future-css-variables">The Future: CSS Variables</h3>
 
-  <h2 id="npm-scripts">npm scripts</h2>
+<p>Something new that’s being introduced are CSS variables.</p>
 
-  <ul>
-    <li>Often overlooked, the <code class="highlighter-rouge">npm</code> tool has a provision to run basic shell
-scripts.</li>
-    <li>The <code class="highlighter-rouge">package.json</code> file that is used to install <code class="highlighter-rouge">nodejs</code> packages
-has a section called <code class="highlighter-rouge">scripts</code> in which you can add your own.</li>
-  </ul>
-
-</section>
-
-<section>
-
-  <h3 id="example">Example:</h3>
-
-  <figure class="highlight">
-    <pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grunt test"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bundle exec jekyll serve"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bundle exec jekyll build --config=_config.yml,_build.yml"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"publish"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm run build &amp;&amp; (cd _dist &amp;&amp; git add --all &amp;&amp; git commit &amp;&amp; git push)"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span></code></pre>
-  </figure>
-
-</section>
-
-<section>
-
-  <h3 id="invocation">Invocation:</h3>
-
-  <ul>
-    <li>You call the script via <code class="highlighter-rouge">npm run SCRIPTNAME</code>.</li>
-    <li>If you have a script labeled “start”, then run <code class="highlighter-rouge">npm start</code> to run
-that script.</li>
-    <li>The scripts themselves are just command line one-liners.</li>
-  </ul>
-
-</section>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank">Using CSS variables - CSS - MDN</a></li>
+  <li><a href="http://caniuse.com/#search=css%20variables" target="_blank">Can I use… CSS variables</a></li>
+</ul>
 
 </section>
 
 
 <section class="">
-  <section>
-  <h2>Static Site Compilers</h2>
+  <h3 id="thanks">Thanks!</h3>
 
-  <ul>
-    <li>
-      Static site compilers gather up all the parts of your web site and
-      compile them into a static web site.
-    </li>
-    <li>
-      They let you define variables and reusable components, and
-      provide some programmatic and templating abilities for your
-      HTML, much like Sass does for your CSS.
-    </li>
-    <li>
-      The provide support for Sass as well.
-    </li>
-  </ul>
+<p><strong>Please fill out the workshop survey
+at:</strong> <a href="http://tinyurl.com/gdimpls" target="_blank">tinyurl.com/GDIMpls</a></p>
 
-  <ul>
-    <li><a href="http://jekyllrb.com/"
-   target="_blank"
-   title="Jekyll Home Page"
-   >
-  Jekyll
-</a>
-. Jekyll sites can be
-    hosted directly on <a href="https://pages.github.com/"
-   target="_blank"
-   title="Github Pages"
-   >
-  Github Pages
-</a>
-</li>
-    <li><a href="http://middlemanapp.com/"
-   target="_blank"
-   title="Middleman App"
-   >
-  Middleman
-</a>
-</li>
-  </ul>
+<p> </p>
 
-</section>
+<p>Use “Stylin With Sass” as the class name</p>
 
 </section>
 
