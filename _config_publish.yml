@@ -12,20 +12,3 @@
 baseurl: "/html-320-stylin-with-sass"
 url: "https://gdiminneapolis.github.io"
 destination: docs
-
-# If you fork something from the GDIMpls repo into your own repo, and
-# use the same publish to Github track, your version will be availble
-# at the url "https://<yourgithub>.github.io/<repo-name/". This could
-# generate some confusion when contributing to the GDIMpls
-# repo. **BEWARE**
-
-# published links
-short_urls:
-  slides:
-    url: http://bit.ly/1Xy9QY2
-    text: http://bit.ly/1Xy9QY2
-    title: Slides
-  print:
-    url: http://bit.ly/1TFmQIJ
-    text: http://bit.ly/1TFmQIJ
-    title: Print Notes

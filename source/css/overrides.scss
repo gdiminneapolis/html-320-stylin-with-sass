@@ -12,45 +12,58 @@ $wide-width: 900px;
 
 
 .reveal {
-    h1, h2, h3, h4, h5, h6 {
-	text-transform: inherit;
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: inherit;
+  }
+  strong { color: $green; }
+  code { color: $yellow; }
+  pre {
+    padding: 10px;
+    /* font-size: 0.6em; */
+    width: 100%;
+    max-height: 480px;
+    &.narrow {
+      width: 70%;
     }
-    strong { color: $green; }
-    code { color: $yellow; }
-    pre {
-	padding: 10px;
-	/* font-size: 0.6em; */
-	width: 100%;
-	max-height: 480px;
-	&.narrow {
-	    width: 70%;
-	}
-	background-color: #222;
-	overflow: auto;
-	code { color: white; }
+    background-color: #222;
+    overflow: auto;
+    code { color: white; }
+  }
+  .slide-number { bottom: inherit; right: inherit; top: 15px; left: 15px; font-size: 1.0em; }
+  .small {font-size: 80%;}
+  .go-wide, .gowide { width: $wide-width; }
+  .left-align {
+    text-align: left;
+    h1, h2, h3, h4, h5, h6 { text-align: center; }
+  }
+  .hide-gif { text-align: center; font-size: 50%; font-style: italic; margin: 10px; cursor: pointer; text-decoration: underline;}
+  .vertical-space {
+    margin-top: 1.2em * 2;
+  }
+  .visually-hidden {
+    display: none;
+  }
+  .notes { display: none; }
+  .two-up {
+    width: 100%;
+    .left {
+      float: left;
+      width: 47%
     }
-    .slide-number { bottom: inherit; right: inherit; top: 15px; left: 15px; font-size: 1.0em; }
-    .small {font-size: 80%;}
-    .go-wide, .gowide { width: $wide-width; }
-    .left-align {
-      text-align: left;
-      h1, h2, h3, h4, h5, h6 { text-align: center; }
+    .right {
+      float: right;
+      width: 47%
     }
-    .hide-gif { text-align: center; font-size: 50%; font-style: italic; margin: 10px; cursor: pointer; text-decoration: underline;}
-    .vertical-space {
-      margin-top: 1.2em * 2;
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
     }
-    .visually-hidden {
-      display: none;
-    }
+  }
 
-    .notes { display: none; }
-
-}
-
-.title-image img { width: 200px; }
-.no-wrap, .nowrap { white-space: nowrap; }
-div.box {
+  .title-image img { width: 200px; }
+  .no-wrap, .nowrap { white-space: nowrap; }
+  div.box {
     clear: both;
     margin: 20px;
     padding: 20px;
@@ -59,7 +72,10 @@ div.box {
     color: #01A9B4;
     text-align: center;
     border-radius: 15px;
+  }
+
 }
+
 
 .reveal {
   .centered-table {

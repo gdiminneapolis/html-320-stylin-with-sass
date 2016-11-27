@@ -42,14 +42,23 @@
   display: none; }
 .reveal .notes {
   display: none; }
-
-.title-image img {
+.reveal .two-up {
+  width: 100%; }
+  .reveal .two-up .left {
+    float: left;
+    width: 47%; }
+  .reveal .two-up .right {
+    float: right;
+    width: 47%; }
+  .reveal .two-up:after {
+    content: '';
+    display: table;
+    clear: both; }
+.reveal .title-image img {
   width: 200px; }
-
-.no-wrap, .nowrap {
+.reveal .no-wrap, .reveal .nowrap {
   white-space: nowrap; }
-
-div.box {
+.reveal div.box {
   clear: both;
   margin: 20px;
   padding: 20px;

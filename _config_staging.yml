@@ -1,16 +1,10 @@
+# This file will be used to build for staging as:
+#
 #   jekyll build --config=_config.yml,_config_staging.yml
-baseurl: "/html-320-stylin-with-sass"
+#
+# You should change this to your own github account name
 url: "https://tamouse.github.io"
 
-short_urls:
-  slides:
-    url: http://bit.ly/1TAWRFu
-    text: http://bit.ly/1Z1gaGn
-    title: Slides
-  print:
-    url: http://bit.ly/1XycdtH
-    text: http://bit.ly/1XycdtH
-    title: Print Notes
-
-qr_codes:
-  slides: images/qr-code-staging.jpg
+## Your shouldn't change anything below this point!
+baseurl: "/html-320-stylin-with-sass"
+destination: docs/
