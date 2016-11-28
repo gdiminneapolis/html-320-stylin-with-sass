@@ -1,8 +1,12 @@
-- href: 'https://twitter.com/gdimpls'
+- url: 'https://twitter.com/gdimpls'
   text: '@GDIMpls'
-- href: 'https://twitter.com/search?q=%23StylinWIthSass&src=typd'
+  title: '@GDIMpls Tweets'
+- url: 'https://twitter.com/search?q=%23StylinWIthSass&src=typd'
   text: '#StylinWithSass'
-- href: 'https://twitter.com/search?q=%23LearnSASS&src=typd'
+  title: 'Search #StylinWithSass on Twitter'
+- url: 'https://twitter.com/search?q=%23LearnSASS&src=typd'
   text: '#LearnSass'
-- href: 'https://twitter.com/tamouse'
+  title: "Search #LearnSass on Twitter"
+- url: 'https://twitter.com/tamouse'
   text: '@tamouse'
+  title: "@tamouse on twitter"

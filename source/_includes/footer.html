@@ -2,7 +2,7 @@
   <div class="copyright">
     <i class="fa fa-twitter fa-lg"><span class="visually-hidden">Twitter</span></i> &bullet;
     {% for tag in site.data.tweet_tags %}
-    <a href="{{ tag.href }}" target="blank">{{ tag.text }}</a> &bullet;
+    {% include link.html link=tag %} &bullet;
     {% endfor %}
     {% include cclicense.html type="image-only" %}
   </div>
