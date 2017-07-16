@@ -1,0 +1,19 @@
+{
+  "name": "html-320-stylin-with-sass",
+  "version": "1.0.0",
+  "description": "Class slides for Stylin with Sass",
+  "repository": "git@github.com:gdiminneapolis/html-320-stylin-with-sass.git",
+  "author": "Tamara Temple <tamouse@gmail.com>",
+  "scripts": {
+    "prestart": "npm run jekyll",
+    "start": "concurrently \"npm run watch:jekyll\" \"npm run bs:serve\"",
+    "watch:jekyll": "watch 'npm run jekyll' source/",
+    "jekyll": "bundle exec jekyll build --config=_config.yml",
+    "bs:serve": "browser-sync start --server _site/ --files _site/ --reload-delay 2000 --reload-debounce 2000"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.12",
+    "concurrently": "^3.5.0",
+    "watch": "^1.0.2"
+  }
+}
