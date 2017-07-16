@@ -300,12 +300,14 @@ well.</small></p>
 
 
 <section class="">
+  <section>
+
   <h3 id="variables">Variables!</h3>
 
-<p><strong>Start with SCSS:</strong></p>
+  <p><strong>Start with SCSS:</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="nv">$brand-primary</span><span class="p">:</span> <span class="no">seagreen</span><span class="p">;</span>
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="nv">$brand-primary</span><span class="p">:</span> <span class="no">seagreen</span><span class="p">;</span>
 <span class="nv">$brand-accent</span><span class="p">:</span> <span class="no">tomato</span><span class="p">;</span>
 <span class="nv">$brand-bg</span><span class="p">:</span> <span class="no">honeydew</span><span class="p">;</span>
 <span class="nt">header</span> <span class="p">{</span>
@@ -313,13 +315,13 @@ well.</small></p>
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$brand-primary</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">header</span> <span class="nt">a</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nv">$brand-accent</span><span class="p">;</span> <span class="p">}</span></code></pre>
-</figure>
+  </figure>
 
-<div class="notes">
-  <h3>Sass dialect:</h3>
+  <div class="notes">
+    <h3>Sass dialect:</h3>
 
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nv">$brand-primary</span><span class="p">:</span> <span class="no">seagreen</span>
+    <figure class="highlight">
+      <pre><code class="language-sass" data-lang="sass"><span class="nv">$brand-primary</span><span class="p">:</span> <span class="no">seagreen</span>
 <span class="nv">$brand-secondary</span><span class="p">:</span> <span class="no">springgreen</span>
 <span class="nv">$brand-accent</span><span class="p">:</span> <span class="no">tomato</span>
 <span class="nv">$brand-bg</span><span class="p">:</span> <span class="no">honeydew</span>
@@ -329,47 +331,59 @@ well.</small></p>
 
 <span class="nt">header</span> <span class="nt">a</span>
   <span class="nl">color</span><span class="p">:</span> <span class="nv">$brand-accent</span></code></pre>
-  </figure>
+    </figure>
 
-</div>
+  </div>
 
-<p><strong>Get CSS!</strong></p>
+  <p><strong>Get CSS!</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="nt">header</span> <span class="p">{</span>
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="nt">header</span> <span class="p">{</span>
   <span class="nl">background</span><span class="p">:</span> <span class="no">honeydew</span><span class="p">;</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">seagreen</span><span class="p">;}</span>
 <span class="nt">header</span> <span class="nt">a</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">tomato</span><span class="p">;}</span></code></pre>
-</figure>
+  </figure>
 
-<p class="notes">Sass let’s you set variables that can hold values used all over
+  <p class="notes">Sass let’s you set variables that can hold values used all over
 your css files, allowing you to quick change a commonly used value
 in only one place.</p>
 
 </section>
 
+<section>
+
+  <h3 id="variables-1">Variables!</h3>
+
+  <p data-height="396" data-theme-id="0" data-slug-hash="MoxRGO" data-default-tab="css,result" data-user="tamouse" data-embed-version="2" data-pen-title="Sass does Variables" class="codepen">See the Pen <a href="https://codepen.io/tamouse/pen/MoxRGO/">Sass does Variables</a> by Tamara Temple (<a href="https://codepen.io/tamouse">@tamouse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+</section>
+
+</section>
+
 
 <section class="">
+  <section>
+
   <h3 id="nesting">Nesting!</h3>
 
-<p><strong>Start with SCSS:</strong></p>
+  <p><strong>Start with SCSS:</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="nt">nav</span> <span class="p">{</span>
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="nt">nav</span> <span class="p">{</span>
   <span class="nt">ul</span> <span class="p">{</span><span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
   <span class="nt">li</span> <span class="p">{</span><span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span>
   <span class="nt">a</span> <span class="p">{</span><span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
     <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span><span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
-</figure>
+  </figure>
 
-<div class="notes">
-  <p><strong>Sass</strong></p>
+  <div class="notes">
+    <p><strong>Sass</strong></p>
 
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nt">nav</span>
+    <figure class="highlight">
+      <pre><code class="language-sass" data-lang="sass"><span class="nt">nav</span>
   <span class="nt">ul</span>
     <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span>
     <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span>
@@ -382,14 +396,14 @@ in only one place.</p>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span>
     <span class="nl">padding</span><span class="p">:</span> <span class="m">6px</span> <span class="m">12px</span>
     <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span></code></pre>
-  </figure>
+    </figure>
 
-</div>
+  </div>
 
-<p><strong>Get CSS!</strong></p>
+  <p><strong>Get CSS!</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="nt">nav</span> <span class="nt">ul</span> <span class="p">{</span>
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="nt">nav</span> <span class="nt">ul</span> <span class="p">{</span>
   <span class="nl">list-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
 <span class="nt">nav</span> <span class="nt">li</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span>
@@ -397,21 +411,33 @@ in only one place.</p>
   <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
   <span class="nt">nav</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
     <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;</span> <span class="p">}</span></code></pre>
-</figure>
+  </figure>
 
-<p class="notes">Sass allows the nesting of CSS so you can clearly tell which rules
+  <p class="notes">Sass allows the nesting of CSS so you can clearly tell which rules
 apply to which parent, without endless repetition.</p>
+
+</section>
+
+<section>
+
+  <h3 id="nesting-1">Nesting!</h3>
+
+  <p data-height="500" data-theme-id="0" data-slug-hash="awMxjR" data-default-tab="css,result" data-user="tamouse" data-embed-version="2" data-pen-title="Sass does Nesting" class="codepen">See the Pen <a href="https://codepen.io/tamouse/pen/awMxjR/">Sass does Nesting</a> by Tamara Temple (<a href="https://codepen.io/tamouse">@tamouse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+</section>
 
 </section>
 
 
 <section class="">
+  <section>
+
   <h3 id="mixins">Mixins!</h3>
 
-<p><strong>Start with SCSS:</strong></p>
+  <p><strong>Start with SCSS:</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">visually-hidden</span> <span class="p">{</span>
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">visually-hidden</span> <span class="p">{</span>
   <span class="nl">text-indent</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
   <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
   <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
@@ -420,14 +446,14 @@ apply to which parent, without endless repetition.</p>
   <span class="k">@include</span> <span class="nd">visually-hidden</span><span class="p">;</span>
   <span class="nl">background</span><span class="p">:</span> <span class="sx">url(logo.png)</span> <span class="nb">no-repeat</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
-</figure>
+  </figure>
 
-<div class="notes">
+  <div class="notes">
 
-  <p><strong>or Sass</strong></p>
+    <p><strong>or Sass</strong></p>
 
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nf">=visually-hidden</span>
+    <figure class="highlight">
+      <pre><code class="language-sass" data-lang="sass"><span class="nf">=visually-hidden</span>
   <span class="nl">text-indent</span><span class="p">:</span> <span class="m">100%</span>
   <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span>
   <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span>
@@ -435,68 +461,81 @@ apply to which parent, without endless repetition.</p>
 <span class="nc">.image-replace</span>
   <span class="nd">+visually-hidden</span>
   <span class="nl">background</span><span class="p">:</span> <span class="sx">url(logo.png)</span> <span class="nb">no-repeat</span></code></pre>
-  </figure>
+    </figure>
 
-</div>
+  </div>
 
-<p><strong>Get CSS!</strong></p>
+  <p><strong>Get CSS!</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="nc">.image-replace</span> <span class="p">{</span>
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="nc">.image-replace</span> <span class="p">{</span>
   <span class="nl">text-indent</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
   <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
   <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
   <span class="nl">background</span><span class="p">:</span> <span class="sx">url(logo.png)</span> <span class="nb">no-repeat</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
-</figure>
+  </figure>
 
-<p class="notes">Mixins let you specify often repeated style specification that are
+  <p class="notes">Mixins let you specify often repeated style specification that are
 used in several independent styles. You could consider a mixin
 like a macro, where the mixin’s content gets included in the style
 specification.</p>
 
 </section>
 
+<section>
+
+  <h3 id="mixins-1">Mixins!</h3>
+
+  <p data-height="404" data-theme-id="0" data-slug-hash="GELWqL" data-default-tab="css,result" data-user="tamouse" data-embed-version="2" data-pen-title="Stylin With Sass: Mixins" class="codepen">See the Pen <a href="https://codepen.io/tamouse/pen/GELWqL/">Stylin With Sass:
+Mixins</a> by Tamara Temple (<a href="https://codepen.io/tamouse">@tamouse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+</section>
+
+</section>
+
 
 <section class="">
+  <section>
+
   <h3 id="partials">Partials!</h3>
 
-<p><strong>Start with SCSS</strong></p>
+  <p><strong>Start with SCSS</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="c1">// file: _settings.scss
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="c1">// file: _settings.scss
 </span><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="mh">#690067</span><span class="p">;</span>
 
 <span class="c1">// file: styles.scss
 </span><span class="k">@import</span> <span class="s2">"settings"</span><span class="p">;</span>
 <span class="nt">header</span><span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primaryBrand</span><span class="p">;}</span></code></pre>
-</figure>
+  </figure>
 
-<div class="notes">
+  <div class="notes">
 
-  <p><strong>Sass</strong></p>
+    <p><strong>Sass</strong></p>
 
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="c1">// file: _settings.sass
+    <figure class="highlight">
+      <pre><code class="language-sass" data-lang="sass"><span class="c1">// file: _settings.sass
 </span><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="mh">#690067</span>
 
 <span class="c1">// file: styles.sass
 </span><span class="na">header</span><span class="p">:</span>
   <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$primaryBrand</span></code></pre>
-  </figure>
+    </figure>
 
-</div>
+  </div>
 
-<p><strong>Get CSS</strong></p>
+  <p><strong>Get CSS</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-css" data-lang="css"><span class="c">/* no file _settings.css */</span>
+  <figure class="highlight">
+    <pre><code class="language-css" data-lang="css"><span class="c">/* no file _settings.css */</span>
 
 <span class="c">/* file: styles.css */</span>
 <span class="nt">header</span><span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="m">#690067</span><span class="p">;}</span></code></pre>
-</figure>
+  </figure>
 
-<p class="notes">You can split out your Sass / SCSS declarations into several files to
+  <p class="notes">You can split out your Sass / SCSS declarations into several files to
 help you keep them all organized. Beginning the file name with the
 underscore character (‘_’) will tell the Sass preprocessor to ignore
 the file because it’s being imported and doesn’t need to have it’s own
@@ -504,107 +543,148 @@ translated CSS file.</p>
 
 </section>
 
+</section>
+
 
 <section class="">
+  <section>
+
   <h3 id="math">Math!</h3>
 
-<p><strong>Start with SCSS</strong></p>
-
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="nv">$laptopMinimum</span><span class="p">:</span> <span class="m">960px</span><span class="p">;</span>
-<span class="nv">$spacing</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-
-<span class="c1">// and then later:
-</span><span class="nc">.container</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="nv">$laptopMinimum</span> <span class="o">-</span> <span class="nv">$spacing</span> <span class="o">*</span> <span class="m">2</span><span class="p">;</span>
-  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
-<span class="p">}</span></code></pre>
-</figure>
-
-<div class="notes">
-  <p><strong>Or Sass</strong></p>
+  <p><strong>Start with SCSS</strong></p>
 
   <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nv">$laptopMinimum</span><span class="p">:</span> <span class="m">960px</span>
-<span class="nv">$spacing</span><span class="p">:</span> <span class="m">16px</span>
-
-<span class="c1">// and then later:
-</span><span class="nc">.container</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="nv">$laptopMinimum</span> <span class="nf">-</span> <span class="p">(</span><span class="nv">$spacing</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span>
-  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span></code></pre>
+    <pre><code class="language-scss" data-lang="scss"><span class="nv">$maxReadableWidth</span><span class="p">:</span> <span class="m">0</span><span class="mi">.7em</span> <span class="o">*</span> <span class="m">52</span><span class="p">;</span>
+<span class="nv">$spacing</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
+<span class="nc">.easy-reading</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="nv">$maxReadableWidth</span> <span class="o">-</span> <span class="nv">$spacing</span> <span class="o">*</span> <span class="m">2</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="o">&gt;</span> <span class="nt">div</span> <span class="p">{</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="nv">$spacing</span> <span class="nv">$spacing</span> <span class="nv">$spacing</span><span class="p">;</span>
+    <span class="k">&amp;</span><span class="nd">:first-child</span> <span class="p">{</span>
+      <span class="nl">padding-top</span><span class="p">:</span> <span class="nv">$spacing</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
   </figure>
 
-</div>
+  <div class="notes">
+    <p><strong>Or Sass</strong></p>
 
-<p><strong>Get CSS!</strong></p>
+    <figure class="highlight">
+      <pre><code class="language-sass" data-lang="sass"><span class="nv">$maxReadableWidth</span><span class="p">:</span> <span class="m">0</span><span class="mi">.7em</span> <span class="o">*</span> <span class="m">52</span>
+<span class="nv">$spacing</span><span class="p">:</span> <span class="m">2em</span>
 
-<figure class="highlight">
-  <pre><code class="language-css" data-lang="css"><span class="nc">.container</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">928px</span><span class="p">;</span>
-  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span> <span class="p">}</span></code></pre>
-</figure>
+<span class="nc">.easy-reading</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="nv">$maxReadableWidth</span> <span class="o">-</span> <span class="nv">$spacing</span> <span class="o">*</span> <span class="m">2</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span>
 
-<div class="notes">
+  <span class="o">&gt;</span> <span class="nt">div</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="nv">$spacing</span> <span class="nv">$spacing</span> <span class="nv">$spacing</span>
 
-  <p>Math operations include:</p>
+    <span class="k">&amp;</span><span class="nd">:first-child</span>
+      <span class="nl">padding-top</span><span class="p">:</span> <span class="nv">$spacing</span></code></pre>
+    </figure>
 
-  <ul>
-    <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations" target="_blank">addition <code class="highlighter-rouge">+</code></a></li>
-    <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations" target="_blank">subtraction <code class="highlighter-rouge">-</code></a></li>
-    <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations" target="_blank">multiplication <code class="highlighter-rouge">*</code></a></li>
-    <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#division-and-slash" target="_blank">division <code class="highlighter-rouge">/</code></a></li>
-  </ul>
+  </div>
 
-</div>
+  <p><strong>Get CSS!</strong></p>
+
+  <figure class="highlight">
+    <pre><code class="language-css" data-lang="css"><span class="nc">.easy-reading</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">32.4em</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.easy-reading</span> <span class="o">&gt;</span> <span class="nt">div</span> <span class="p">{</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">2em</span> <span class="m">2em</span> <span class="m">2em</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nc">.easy-reading</span> <span class="o">&gt;</span> <span class="nt">div</span><span class="nd">:first-child</span> <span class="p">{</span>
+      <span class="nl">padding-top</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="p">}</span></code></pre>
+  </figure>
+
+  <div class="notes">
+
+    <p>Math operations include:</p>
+
+    <ul>
+      <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations" target="_blank">addition <code class="highlighter-rouge">+</code></a></li>
+      <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations" target="_blank">subtraction <code class="highlighter-rouge">-</code></a></li>
+      <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations" target="_blank">multiplication <code class="highlighter-rouge">*</code></a></li>
+      <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#division-and-slash" target="_blank">division <code class="highlighter-rouge">/</code></a></li>
+    </ul>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h3 id="math-1">Math!</h3>
+
+  <p data-height="384" data-theme-id="0" data-slug-hash="bRJqrV" data-default-tab="css,result" data-user="tamouse" data-embed-version="2" data-pen-title="Stylin With Sass: Math" class="codepen">See the Pen <a href="https://codepen.io/tamouse/pen/bRJqrV/">Stylin With Sass:
+Math</a> by Tamara Temple (<a href="https://codepen.io/tamouse">@tamouse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+</section>
 
 </section>
 
 
 <section class="">
+  <section>
+
   <h3 id="colours">Colours!</h3>
 
-<p><strong>Start with SCSS</strong></p>
+  <p><strong>Start with SCSS</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="n">MediumBlue</span><span class="p">;</span>
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="n">MediumBlue</span><span class="p">;</span>
 <span class="nv">$secondaryBrand</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$primaryBrand</span><span class="o">,</span> <span class="m">25%</span><span class="p">);</span>
 
 <span class="nc">.site-header</span> <span class="p">{</span>
   <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondaryBrand</span><span class="p">;</span>
 <span class="p">}</span></code></pre>
-</figure>
+  </figure>
 
-<div class="notes">
+  <div class="notes">
 
-  <p><strong>Or Sass</strong></p>
+    <p><strong>Or Sass</strong></p>
 
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="n">MediumBlue</span>
+    <figure class="highlight">
+      <pre><code class="language-sass" data-lang="sass"><span class="nv">$primaryBrand</span><span class="p">:</span> <span class="n">MediumBlue</span>
 <span class="nv">$secondaryBrand</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$primaryBrand</span><span class="o">,</span> <span class="m">25%</span><span class="p">)</span>
 <span class="nc">.site-header</span>
   <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$secondaryBrand</span></code></pre>
+    </figure>
+
+  </div>
+
+  <p><strong>Get CSS!</strong></p>
+
+  <figure class="highlight">
+    <pre><code class="language-css" data-lang="css"><span class="nc">.site-header</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#00004e</span><span class="p">;</span> <span class="p">}</span></code></pre>
   </figure>
 
-</div>
+  <div class="notes">
 
-<p><strong>Get CSS!</strong></p>
+    <p>Color transformations include:</p>
+    <ul>
+      <li>darken</li>
+      <li>lighten</li>
+      <li>opacify</li>
+      <li>transparentize</li>
+    </ul>
 
-<figure class="highlight">
-  <pre><code class="language-css" data-lang="css"><span class="nc">.site-header</span> <span class="p">{</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#00004e</span><span class="p">;</span> <span class="p">}</span></code></pre>
-</figure>
+  </div>
 
-<div class="notes">
+</section>
 
-  <p>Color transformations include:</p>
-  <ul>
-    <li>darken</li>
-    <li>lighten</li>
-    <li>opacify</li>
-    <li>transparentize</li>
-  </ul>
+<section>
 
-</div>
+  <h3 id="colours-1">Colours!</h3>
+
+  <p data-height="359" data-theme-id="0" data-slug-hash="JJVWzw" data-default-tab="css,result" data-user="tamouse" data-embed-version="2" data-pen-title="Stylin With Sass: Colours!" class="codepen">See the Pen <a href="https://codepen.io/tamouse/pen/JJVWzw/">Stylin With Sass:
+Colours!</a> by Tamara Temple (<a href="https://codepen.io/tamouse">@tamouse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+</section>
 
 </section>
 
@@ -656,46 +736,48 @@ translated CSS file.</p>
 
 
 <section class="">
+  <section>
+
   <h3 id="loops">Loops!</h3>
 
-<p><strong>Start with SCSS</strong></p>
+  <p><strong>Start with SCSS</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span> <span class="p">{</span>
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span> <span class="p">{</span>
   <span class="nc">.column-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span>
     <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
-</figure>
-
-<div class="notes">
-
-  <p><strong>or Sass</strong></p>
-
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span>
-  <span class="nc">.column-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span></code></pre>
   </figure>
 
-</div>
+  <div class="notes">
 
-<p><strong>Get CSS!</strong></p>
+    <p><strong>or Sass</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-css" data-lang="css"><span class="nc">.column-1</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.column-2</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">4em</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.column-3</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">6em</span><span class="p">;</span> <span class="p">}</span></code></pre>
-</figure>
+    <figure class="highlight">
+      <pre><code class="language-sass" data-lang="sass"><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span>
+  <span class="nc">.column-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span></code></pre>
+    </figure>
 
-<aside class="notes">
+  </div>
 
-  <p>Suppose you wanted a set of columns growing in half-alphabet widths.</p>
-
-  <p>In SCSS:</p>
+  <p><strong>Get CSS!</strong></p>
 
   <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$alphabet</span><span class="p">:</span> <span class="m">26</span><span class="p">;</span>
+    <pre><code class="language-css" data-lang="css"><span class="nc">.column-1</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.column-2</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">4em</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.column-3</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">6em</span><span class="p">;</span> <span class="p">}</span></code></pre>
+  </figure>
+
+  <aside class="notes">
+
+    <p>Suppose you wanted a set of columns growing in half-alphabet widths.</p>
+
+    <p>In SCSS:</p>
+
+    <figure class="highlight">
+      <pre><code class="language-scss" data-lang="scss"><span class="nv">$alphabet</span><span class="p">:</span> <span class="m">26</span><span class="p">;</span>
 
 <span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">4</span> <span class="p">{</span>
   <span class="nv">$_colwidth</span><span class="p">:</span> <span class="p">(</span><span class="nv">$alphabet</span> <span class="o">/</span> <span class="m">2</span><span class="p">)</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span>
@@ -703,29 +785,42 @@ translated CSS file.</p>
     <span class="nl">width</span><span class="p">:</span> <span class="si">#{</span><span class="nv">$_colwidth</span><span class="si">}</span><span class="nb">px</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
-  </figure>
+    </figure>
 
-  <p>Would output CSS:</p>
+    <p>Would output CSS:</p>
 
-  <figure class="highlight">
-    <pre><code class="language-css" data-lang="css"><span class="nc">.column-13</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span> <span class="p">}</span>
+    <figure class="highlight">
+      <pre><code class="language-css" data-lang="css"><span class="nc">.column-13</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span> <span class="p">}</span>
 <span class="nc">.column-26</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">26px</span><span class="p">;</span> <span class="p">}</span>
 <span class="nc">.column-39</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">39px</span><span class="p">;</span> <span class="p">}</span>
 <span class="nc">.column-52</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">52px</span><span class="p">;</span> <span class="p">}</span></code></pre>
-  </figure>
+    </figure>
 
-</aside>
+  </aside>
+
+</section>
+
+<section>
+
+  <h3 id="loops-1">Loops!</h3>
+
+  <p data-height="347" data-theme-id="0" data-slug-hash="JJVWgz" data-default-tab="css,result" data-user="tamouse" data-embed-version="2" data-pen-title="Stylin With Sass: Loops!" class="codepen">See the Pen <a href="https://codepen.io/tamouse/pen/JJVWgz/">Stylin With Sass:
+Loops!</a> by Tamara Temple (<a href="https://codepen.io/tamouse">@tamouse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+</section>
 
 </section>
 
 
 <section class="">
+  <section>
+
   <h3 id="branches">Branches!</h3>
 
-<p><strong>Start with SCSS:</strong></p>
+  <p><strong>Start with SCSS:</strong></p>
 
-<figure class="highlight">
-  <pre><code class="language-scss" data-lang="scss"><span class="nv">$type</span><span class="p">:</span> <span class="n">monster</span><span class="p">;</span>
+  <figure class="highlight">
+    <pre><code class="language-scss" data-lang="scss"><span class="nv">$type</span><span class="p">:</span> <span class="n">monster</span><span class="p">;</span>
 <span class="nt">p</span> <span class="p">{</span>
   <span class="k">@if</span> <span class="nv">$type</span> <span class="o">==</span> <span class="n">ocean</span> <span class="p">{</span>
     <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
@@ -737,14 +832,14 @@ translated CSS file.</p>
     <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
-</figure>
+  </figure>
 
-<div class="notes">
+  <div class="notes">
 
-  <p><strong>or Sass:</strong></p>
+    <p><strong>or Sass:</strong></p>
 
-  <figure class="highlight">
-    <pre><code class="language-sass" data-lang="sass"><span class="nv">$type</span><span class="p">:</span> <span class="n">monster</span>
+    <figure class="highlight">
+      <pre><code class="language-sass" data-lang="sass"><span class="nv">$type</span><span class="p">:</span> <span class="n">monster</span>
 
 <span class="nt">p</span>
   <span class="k">@if</span> <span class="nv">$type</span> <span class="o">==</span> <span class="n">ocean</span>
@@ -755,17 +850,29 @@ translated CSS file.</p>
     <span class="nl">color</span><span class="p">:</span> <span class="no">green</span>
   <span class="k">@else</span>
     <span class="nl">color</span><span class="p">:</span> <span class="no">black</span></code></pre>
+    </figure>
+
+  </div>
+
+  <p><strong>Get CSS!</strong></p>
+
+  <figure class="highlight">
+    <pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span> <span class="p">}</span></code></pre>
   </figure>
 
-</div>
+</section>
 
-<p><strong>Get CSS!</strong></p>
+<section>
 
-<figure class="highlight">
-  <pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span> <span class="p">}</span></code></pre>
-</figure>
+  <h3 id="branches-1">Branches!</h3>
 
+  <p data-height="500" data-theme-id="0" data-slug-hash="MoRmyX" data-default-tab="css,result" data-user="tamouse" data-embed-version="2" data-pen-title="Stylin With Sass: Branches" class="codepen">See the Pen <a href="https://codepen.io/tamouse/pen/MoRmyX/">Stylin With Sass:
+Branches</a> by Tamara Temple (<a href="https://codepen.io/tamouse">@tamouse</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+  <p><a href="https://codepen.io/tamouse/pen/MoRmyX">View on codepen.io</a></p>
+
+</section>
 
 </section>
 
@@ -1755,6 +1862,7 @@ at:</strong> <a href="http://tinyurl.com/gdimpls" target="_blank">tinyurl.com/GD
     </div><!-- .reveal -->
     <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
 <script src="/html-320-stylin-with-sass/js/revealConfig.js"></script>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
   </body>
 </html>
