@@ -20,6 +20,8 @@
     width: 70%; }
   .reveal pre code {
     color: white; }
+.reveal .print-only {
+  display: none; }
 .reveal .slide-number {
   bottom: inherit;
   right: inherit;
@@ -48,17 +50,15 @@
 .reveal .notes {
   display: none; }
 .reveal .two-up {
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
   .reveal .two-up .left {
-    float: left;
-    width: 47%; }
+    flex: 1; }
   .reveal .two-up .right {
-    float: right;
-    width: 47%; }
-  .reveal .two-up:after {
-    content: '';
-    display: table;
-    clear: both; }
+    flex: 1; }
 .reveal .title-image img {
   width: 200px; }
 .reveal .no-wrap, .reveal .nowrap {
