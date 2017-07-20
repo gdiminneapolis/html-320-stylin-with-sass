@@ -1,0 +1,42 @@
+.page-footer {
+  @extend .clearfix;
+  background-image: -webkit-linear-gradient(#00665F, #1D766F, #00665F);
+  background-image: -moz-linear-gradient(#00665F, #1D766F, #00665F);
+  background-image: linear-gradient(#00665F, #1D766F, #00665F);
+}
+
+.page-footer__nav {
+  float: left;
+  margin: 10px;
+}
+
+.page-footer__list {}
+
+.page-footer__list-item {
+  float: left;
+  line-height: 40px;
+
+  @media screen and (min-width: $mobile-width){
+    line-height: 75px;
+  }
+}
+
+.page-footer__list-link {
+  @include page-nav-links;
+  font-size: 0.9em;
+  margin: 3px;
+  padding: 1px;
+
+  @media screen and (min-width: $mobile-width) {
+    font-size: 1.2em;
+    margin: 0px 10px;
+    padding: 5px 10px;
+  }
+
+  &:hover {
+    color: #FFEECC;
+  }
+
+}
+
+

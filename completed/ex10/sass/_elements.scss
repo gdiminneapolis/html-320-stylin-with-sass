@@ -1,0 +1,17 @@
+/* Elements Styles */
+body {
+  margin: 0px auto;
+  width: 100%;
+}
+
+p {
+  margin: 1em;
+}
+
+a {
+  text-decoration: none;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}

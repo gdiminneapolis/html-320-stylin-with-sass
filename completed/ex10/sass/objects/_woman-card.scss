@@ -1,0 +1,89 @@
+
+.woman-card {
+  min-height: 250px;
+  opacity: 0.8;
+
+  margin: 5px auto;
+  padding: 2%;
+  width: 80%;
+
+  &--card-color {
+    color: $womanCardTextColor;
+    background-color: $womanCardBackgroundColor;
+  }
+
+  @media screen and (min-width: $mobile-width) {
+    float: left;
+    margin: 1%;
+    padding: 2%;
+    width: 27.33%;
+
+    &:nth-child(4n) {
+      clear:both;
+    }
+
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__title {
+    margin: 0 0 0.3em 0;
+    text-shadow: 1px 1px 2px $womanCardTextShadow;
+    padding: 20px;
+    text-align: center;
+
+    @media screen and (min-width: $mobile-width) {
+      font-size: 1.6em;
+    }
+  }
+
+  &--title-font {
+    font-family: $womanCardTitleFont;
+    font-size: $womanCardTitleFontSize;
+    font-weight: $womanCardTitleFontWeight;
+    line-height: $womanCardTitleFontLineHeight;
+  }
+
+  &__life-span {
+    color: $womanCardLifeSpanColor;
+    background-color: $womanCardLifeSpanBackgroundColor;
+    font-size: $womanCardTitleFontSize;
+    text-align: center;
+  }
+
+  &__bio {
+
+  }
+
+  &__portrait {
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #000;
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+  }
+
+  &--swing:hover {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+  }
+
+  &--link-color {
+    color: $baseLinkColor;
+    background-color: $baseLinkBackgroundColor;
+    &:hover {
+      color: $baseHoverLinkColor;
+      background-color: $baseHoverBackgroundColor;
+
+    }
+  }
+
+
+}

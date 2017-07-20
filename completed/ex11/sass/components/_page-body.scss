@@ -1,0 +1,12 @@
+.page-body {
+  &--base-color {
+    background-color: $baseBackgroundColor;
+    color: $baseTextColor;
+  }
+  &--base-font {
+    font-family: $baseFont;
+    font-size: $baseFontSize;
+    font-weight: $baseFontWeight;
+    line-height: $baseFontLineHeight;
+  }
+}

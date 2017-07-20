@@ -1,0 +1,30 @@
+.page-footer {
+  @extend .clearfix;
+  background-image: -webkit-linear-gradient(#00665F, #1D766F, #00665F);
+  background-image: -moz-linear-gradient(#00665F, #1D766F, #00665F);
+  background-image: linear-gradient(#00665F, #1D766F, #00665F);
+}
+
+.page-footer__nav {
+  float: left;
+  margin: 10px;
+}
+
+.page-footer__list {
+  font-size: 1.1em;
+}
+
+.page-footer__list-item {
+  float: left;
+}
+
+.page-footer__list-link {
+  @include page-nav-links;
+
+  &:hover {
+    color: #FFEECC;
+  }
+
+}
+
+

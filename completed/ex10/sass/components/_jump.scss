@@ -1,0 +1,26 @@
+
+
+.jump-nav {
+
+  &__link {
+    @include entypo-icon($contrastLinkColor, '');
+    font-size: 70px;
+    line-height: 80px;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+
+    &:hover {
+      color: $contrastBrightHoverLinkColor;
+    }
+  }
+
+  &--up {
+    left: 15px;
+  }
+  &--down {
+    right: 15px;
+  }
+
+}
+
