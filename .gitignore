@@ -7,3 +7,4 @@ _site
 !/project_template/stylesheets/css/.keep
 /tmp/
 node_modules/
+prepros*.config
