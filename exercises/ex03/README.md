@@ -18,6 +18,8 @@ ______________
 
 ```
 
+# Exercise 03 - Create the Structure
+
 Create the following files in the `sass` folder:
 
 - `_settings.scss`

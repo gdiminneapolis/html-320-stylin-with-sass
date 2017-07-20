@@ -1,12 +1,15 @@
 # Exercise 01: Create SCSS Files
 
-Add the `ex01` folder to you Propros projects.
+1. Add the `ex01` folder to Prepros projects (Drag and drop into projects area).
 
-Rename the files with the `.css` extension to have the `.scss` extension.
+2. Open the `ex01` folder in your editor.
 
-* `css/reset.css` => `css/reset.scss`
-* `css/styles.css` => `css/styles.scss`
+3. Create a directory called `sass` in the exercise root.
 
-Configure Prepros to compile the scss files.
+4. Move and rename the two CSS files to the `sass` directory:
+  * `css/reset.css` becomes `sass/reset.scss`
+  * `css/styles.css` becomes `sass/styles.scss`
 
-* check "Auto Compile" and "Source Map"
+**NOTE:** you are both *moving* AND *renaming* the files.
+
+5. in Prepros, refresh the ex01 project and open the live preview.
